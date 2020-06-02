@@ -66,7 +66,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* o-wrapper component */
 .o-wrapper {
     width: 100%;
@@ -75,6 +75,7 @@ export default {
 
 .o-wrapper--centered-content {
     justify-items: center;
+    text-align: center;
 }
 
 .o-wrapper--padding-section {

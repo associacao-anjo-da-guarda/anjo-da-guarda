@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* o-section component */
 .o-section {
     width: 100%;

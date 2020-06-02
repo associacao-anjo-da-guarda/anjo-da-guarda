@@ -22,10 +22,10 @@
     * Text colors settings
     * - You need to change only the --settings HSL values below
     */
-    --settings-color-on-bg: 0, 0%, 100%;
-    --settings-color-on-surface: 0, 0%, 100%;
+    --settings-color-on-bg: 348, 83%, 2%;
+    --settings-color-on-surface: 348, 83%, 2%;
     --settings-color-on-primary: 0, 0%, 100%;
-    --settings-color-on-secondary: 0, 0%, 0%;
+    --settings-color-on-secondary: 348, 83%, 2%;
     --settings-color-on-error: 0, 0%, 100%;
     --settings-color-on-success: 0, 0%, 100%;
 

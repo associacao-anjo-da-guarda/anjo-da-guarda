@@ -69,12 +69,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* a-title component */
 .a-title {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-title);
     line-height: var(--line-height-title);
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
 }
 
 .a-title--level-1 {

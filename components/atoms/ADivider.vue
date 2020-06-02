@@ -34,8 +34,7 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
 .a-divider {
     width: 100%;
     height: 1px;
@@ -43,18 +42,17 @@ export default {
     background-color: var(--color-onSurface);
     opacity: calc(var(--color-contrast-low, 0.2) / 2);
 }
-    .a-divider--vertical {
-        width: 1px;
-        height: 100%;
-    }
-    .a-divider--emphasis-low {
-        opacity: calc(var(--color-contrast-low, 0.2) / 2);
-    }
-    .a-divider--emphasis-medium {
-        opacity: calc(var(--color-contrast-medium, 0.4) / 2);
-    }
-    .a-divider--emphasis-hi {
-        opacity: calc(var(--color-contrast-hi, 0.87) / 2);
-    }
-
+.a-divider--vertical {
+    width: 1px;
+    height: 100%;
+}
+.a-divider--emphasis-low {
+    opacity: calc(var(--color-contrast-low, 0.2) / 2);
+}
+.a-divider--emphasis-medium {
+    opacity: calc(var(--color-contrast-medium, 0.4) / 2);
+}
+.a-divider--emphasis-hi {
+    opacity: calc(var(--color-contrast-hi, 0.87) / 2);
+}
 </style>
