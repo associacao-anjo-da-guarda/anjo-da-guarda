@@ -10,7 +10,7 @@ import OWrapper from '@/components/organisms/OWrapper.vue'
 import AButton from '@/components/atoms/AButton.vue'
 import AText from '@/components/atoms/AText.vue'
 import ATitle from '@/components/atoms/ATitle.vue'
-import AInput from '@/components/atoms/AInput.vue'
+// import AInput from '@/components/atoms/AInput.vue'
 import AImage from '@/components/atoms/AImage.vue'
 
 Vue.component('OSection', OSection)
@@ -19,7 +19,7 @@ Vue.component('OWrapper', OWrapper)
 Vue.component('AButton', AButton)
 Vue.component('AText', AText)
 Vue.component('ATitle', ATitle)
-Vue.component('AInput', AInput)
+// Vue.component('AInput', AInput)
 Vue.component('AImage', AImage)
 
 // components.keys().forEach( fileName => {

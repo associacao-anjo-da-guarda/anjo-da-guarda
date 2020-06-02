@@ -75,6 +75,7 @@ export default {
 
 .o-wrapper--centered-content {
     justify-items: center;
+    text-align: center;
 }
 
 .o-wrapper--padding-section {

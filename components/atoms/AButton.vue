@@ -9,6 +9,7 @@
         :disabled="disabled"
         :class="{
             'a-button': 1,
+            'a-button--secondary': secondary,
             'a-button--disabled': disabled,
             'a-button--outlined': outlined,
             'a-button--text': text,
@@ -47,6 +48,8 @@ export default {
             type: String,
             default: ''
         },
+
+        secondary: Boolean,
 
         disabled: Boolean,
 
@@ -109,7 +112,15 @@ export default {
 }
 
 .a-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.a-button--secondary {
     background-color: var(--color-secondary);
+    color: var(--color-on-secondary);
+}
+.a-button--secondary:hover {
+    background-color: var(--color-secondary-dark);
 }
 
 /* a-button--disabled */
