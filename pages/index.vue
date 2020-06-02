@@ -83,13 +83,66 @@
             </o-wrapper>
         </o-section>
 
-        <section class="section who">
-            <div class="wrapper who__wrapper">
-                <!-- atomic design -->
-                <!-- BEM -->
+        <o-section class="o-section-about">
+            <o-wrapper
+                padding-section
+                centered-content
+                row-gap-large
+                boxed
+            >
 
-            </div>
-        </section>
+                <o-section>
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                    >
+
+                        <a-title
+                            tag="h2"
+                            level2
+                        >
+                            Quem somos
+                        </a-title>
+
+                    </o-wrapper>
+                </o-section>
+
+                <o-section class="o-section-about__body">
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                        class="o-section-about-body__wrapper"
+                    >
+
+                        <a-text>
+                            Somos a Associação <strong>Anjo da Guarda</strong>, uma entidade não governamental e sem fins lucrativos, que ajuda crianças e adolescentes em situação de vulnerabilidade social, na região de São José do Rio Preto.
+                        </a-text>
+
+                        <a-text>
+                            Promovemos atividades e oficinas de recreação nas áreas de artes, cultura, esporte e lazer, além de fornecer assistência psicológica, social e alimentação para crianças e adolescentes de 6 a 14 anos.
+                        </a-text>
+
+                    </o-wrapper>
+                </o-section>
+
+                <o-section>
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                    >
+
+                        <a-button
+                            primary
+                            large
+                        >
+                            Nossa história!
+                        </a-button>
+
+                    </o-wrapper>
+                </o-section>
+
+            </o-wrapper>
+        </o-section>
 
     </main>
 
@@ -131,5 +184,9 @@ export default {
         justify-content: center;
         column-gap: calc(var(--space-grid) * 3);
     }
+}
+
+.o-section-about {
+    background-color: var(--color-secondary);
 }
 </style>
