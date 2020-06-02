@@ -66,7 +66,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* o-wrapper component */
 .o-wrapper {
     width: 100%;

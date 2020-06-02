@@ -69,7 +69,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* a-title component */
 .a-title {
     font-family: var(--font-family-title);

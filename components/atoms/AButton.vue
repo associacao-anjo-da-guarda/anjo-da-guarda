@@ -87,7 +87,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* a-button component */
 .a-button {
     display: inline-flex;

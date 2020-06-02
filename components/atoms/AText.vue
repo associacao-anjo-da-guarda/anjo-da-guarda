@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 /* a-text component */
 .a-text {
     font-size: var(--text);
