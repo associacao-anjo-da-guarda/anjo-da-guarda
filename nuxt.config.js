@@ -1,5 +1,7 @@
 export default {
+
   mode: 'universal',
+
   /*
    ** Headers of the page
    */
@@ -16,8 +18,9 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+
   generate: {
-    routes: function() {
+    routes: function () {
       const fs = require('fs')
       return fs.readdirSync('./assets/content/blog').map(file => {
         return {
@@ -27,6 +30,7 @@ export default {
       })
     }
   },
+
   /*
    ** Customize the progress-bar color
    */
@@ -34,7 +38,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/css/theme.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -57,6 +61,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend (config, ctx) { }
   }
 }
