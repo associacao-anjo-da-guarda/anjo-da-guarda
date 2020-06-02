@@ -144,6 +144,64 @@
             </o-wrapper>
         </o-section>
 
+        <o-section class="o-section-waiting">
+            <o-wrapper
+                padding-section
+                centered-content
+                row-gap-large
+                boxed
+                class="o-section-waiting__wrapper"
+            >
+
+                <o-section>
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                    >
+
+                        <a-title
+                            tag="h2"
+                            level2
+                        >
+                            Estamos esperando<br> por você!
+                        </a-title>
+
+                    </o-wrapper>
+                </o-section>
+
+                <o-section class="o-section-waiting__body">
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                        class="o-section-waiting-body__wrapper"
+                    >
+
+                        <a-text color="--color-on-primary-hi">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh quam a habitasse et
+                        </a-text>
+
+                    </o-wrapper>
+                </o-section>
+
+                <o-section>
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                    >
+
+                        <a-button
+                            secondary
+                            large
+                        >
+                            Quero doar!
+                        </a-button>
+
+                    </o-wrapper>
+                </o-section>
+
+            </o-wrapper>
+        </o-section>
+
     </main>
 
 </template>
@@ -188,5 +246,28 @@ export default {
 
 .o-section-about {
     background-color: var(--color-secondary);
+}
+
+.o-section-waiting {
+    color: var(--color-on-primary-hi);
+    background: radial-gradient(
+            73.14% 73.14% at 50% 26.86%,
+            rgba(212, 17, 63, 0) 0%,
+            #d4113f 61.46%
+        ),
+        url("~assets/image-criancas-em-roda.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.o-section-waiting__wrapper {
+    height: calc(100vh - 65px);
+    align-content: end;
+}
+
+@media screen and (min-width: 1200) {
+    .o-section-waiting__wrapper {
+        height: calc(100vh - 81px);
+        align-content: end;
+    }
 }
 </style>
