@@ -2,9 +2,7 @@
 
     <div class="container">
 
-        <!-- <header>
-            oioi paos dpoias d
-        </header> -->
+        <o-navbar />
 
         <nuxt />
 
@@ -15,6 +13,19 @@
     </div>
 
 </template>
+
+<script>
+import ONavbar from '@/components/organisms/ONavbar'
+
+export default {
+
+    name: 'Default',
+
+    components: {
+        ONavbar
+    }
+}
+</script>
 
 <style>
 </style>

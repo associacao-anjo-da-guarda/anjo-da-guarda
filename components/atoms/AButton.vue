@@ -13,7 +13,8 @@
             'a-button--outlined': outlined,
             'a-button--text': text,
             'a-button--chip': chip,
-            'a-button--large': large
+            'a-button--large': large,
+            'a-button--fit-content': fitContent
         }"
         @click="handleClick"
     >
@@ -55,7 +56,9 @@ export default {
 
         chip: Boolean,
 
-        large: Boolean
+        large: Boolean,
+
+        fitContent: Boolean
 
     },
 
@@ -87,6 +90,7 @@ export default {
 <style scoped>
 /* a-button component */
 .a-button {
+    display: inline-flex;
     padding-top: var(--space-grid, 0.5rem);
     padding-bottom: var(--space-grid, 0.5rem);
     padding-left: calc(var(--space-grid, 0.5rem) * 2);
@@ -97,6 +101,7 @@ export default {
     font-size: var(--button, 0.875rem);
     font-weight: 500;
     text-align: center;
+    justify-content: center;
     border: 0;
     border-radius: 0.3125rem;
     cursor: pointer;
@@ -153,8 +158,8 @@ export default {
 }
 
 .a-button--text:hover {
-    background-color: rgba(241, 90, 36, 0.15);
-    color: var(--color-secondary);
+    background-color: var(--color-primary-light-contrast-low);
+    color: var(--color-primary-dark);
 }
 
 /* a-button--outlined */
@@ -165,8 +170,12 @@ export default {
 }
 
 .a-button--outlined:hover {
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--color-primary-dark);
     background-color: transparent;
-    color: var(--color-secondary);
+    color: var(--color-primary-dark);
+}
+
+.a-button--fit-content {
+    width: fit-content;
 }
 </style>
