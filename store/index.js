@@ -1,5 +1,6 @@
 export const state = () => ({
-    blogPosts: []
+    blogPosts: [],
+    home: []
 })
 
 export const mutations = {
@@ -15,11 +16,23 @@ export const actions = {
             false,
             /\.json$/
         )
+
+        // const homeFile = await import('~/assets/content/home.json')
+
+        // console.log('files', files.keys())
+        // console.log('files', files.keys())
+
         const blogPosts = files.keys().map((key) => {
             const res = files(key)
+
+            // console.log('files(key)', files(key))
+
             res.slug = key.slice(2, -5)
             return res
         })
+
+        // console.log('blogPosts', blogPosts)
+
         await commit('setBlogPosts', blogPosts)
     }
 }
