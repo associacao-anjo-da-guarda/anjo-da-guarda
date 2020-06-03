@@ -2,13 +2,63 @@
 
     <main class="o-main">
 
-        <section class="section intro">
-            <div class="wrapper intro__wrapper">
-                <!-- atomic design -->
-                <!-- BEM -->
+        <o-section class="o-section-intro">
+            <o-wrapper
+                padding-section
+                centered-content
+                row-gap-large
+                boxed
+                class="o-section-intro__wrapper"
+            >
 
-            </div>
-        </section>
+                <o-section>
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                    >
+
+                        <a-title
+                            tag="h2"
+                            level2
+                        >
+                            Seja o herói de 130 crianças<br> que precisam de você
+                        </a-title>
+
+                    </o-wrapper>
+                </o-section>
+
+                <o-section class="o-section-intro__body">
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                        class="o-section-intro-body__wrapper"
+                    >
+
+                        <a-text color="--color-on-primary-hi">
+                            Sua doação ajuda o pequeno Mário e outras 130 crianças a<br>ter um futuro melhor
+                        </a-text>
+
+                    </o-wrapper>
+                </o-section>
+
+                <o-section>
+                    <o-wrapper
+                        centered-content
+                        row-gap-normal
+                    >
+
+                        <a-button
+                            secondary
+                            large
+                        >
+                            Quero ajudar
+                        </a-button>
+
+                    </o-wrapper>
+                </o-section>
+
+            </o-wrapper>
+        </o-section>
 
         <o-section class="o-section-cases">
             <o-wrapper
@@ -227,14 +277,14 @@ export default {
 </script>
 
 <style scoped>
-.o-main {
+/* .o-main {
     margin-top: 65px;
 }
 @media screen and (min-width: 1200px) {
     .o-main {
         margin-top: 81px;
     }
-}
+} */
 
 @media screen and (min-width: 1200px) {
     .o-section-cases-body__wrapper {
@@ -242,6 +292,22 @@ export default {
         justify-content: center;
         column-gap: calc(var(--space-grid) * 3);
     }
+}
+
+.o-section-intro {
+    color: var(--color-on-primary-hi);
+    background: radial-gradient(
+            73.14% 73.14% at 50% 26.86%,
+            rgba(212, 17, 63, 0) 0%,
+            #d4113f 61.46%
+        ),
+        url("~assets/girl-holding-dandelion-flower.jpg") no-repeat top center;
+    background-size: cover;
+}
+
+.o-section-intro__wrapper {
+    height: calc(140vh - 85px);
+    align-content: end;
 }
 
 .o-section-about {
