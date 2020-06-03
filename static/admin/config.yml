@@ -10,6 +10,13 @@ media_library:
   config:
     publicKey: ef4aabe94d3c70720696
 
+site_url: https://projetoanjodaguarda.org
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
   - name: 'blog'
     label: 'Blog'
