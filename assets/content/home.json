@@ -1,0 +1,38 @@
+{
+    "sectionIntro": {
+        "title": "Seja o herói de 130 crianças que precisam de você",
+        "text": "Sua doação ajuda o pequeno Mário e outras 130 crianças a ter um futuro melhor",
+        "buttonText": "Quero ajudar"
+    },
+    "sectionCases": {
+        "title": "Sua ajuda faz a diferença",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh quam a habitasse et",
+        "cases": [{
+                "image": "https://ucarecdn.com/11454b73-46ad-4b89-965e-750d48de766b/imagecriancabrincandodesuperman.jpg",
+                "title": "Sua ajuda faz a diferença",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "image": "https://ucarecdn.com/11454b73-46ad-4b89-965e-750d48de766b/imagecriancabrincandodesuperman.jpg",
+                "title": "Sua ajuda faz a diferença",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            },
+            {
+                "image": "https://ucarecdn.com/11454b73-46ad-4b89-965e-750d48de766b/imagecriancabrincandodesuperman.jpg",
+                "title": "Sua ajuda faz a diferença",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            }
+        ],
+        "buttonText": "Doe agora!"
+    },
+    "sectionAbout": {
+        "title": "Quem somos",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh quam a habitasse et",
+        "buttonText": "Nossa história"
+    },
+    "sectionWaiting": {
+        "title": "Estamos esperando por você!",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh quam a habitasse et",
+        "buttonText": "Quero doar!"
+    }
+}

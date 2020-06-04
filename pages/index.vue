@@ -28,11 +28,11 @@
                             tag="h2"
                             level2
                         >
-                            Sua ajuda faz a diferença
+                            {{ home.sectionCases.title }}
                         </a-title>
 
                         <a-text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh quam a habitasse et
+                            {{ home.sectionCases.text }}
                         </a-text>
 
                     </o-wrapper>
@@ -46,19 +46,11 @@
                     >
 
                         <m-card
-                            image="image-crianca-brincando-de-superman.jpg"
-                            title="Sua ajuda faz a diferença"
-                            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-                        />
-                        <m-card
-                            image="image-crianca-brincando-de-superman.jpg"
-                            title="Sua ajuda faz a diferença"
-                            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-                        />
-                        <m-card
-                            image="image-crianca-brincando-de-superman.jpg"
-                            title="Sua ajuda faz a diferença"
-                            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                            v-for="(story, index) in cases"
+                            :key="index"
+                            :image="story.image"
+                            :title="story.title"
+                            :text="story.text"
                         />
 
                     </o-wrapper>
@@ -74,7 +66,7 @@
                             secondary
                             large
                         >
-                            Doe agora!
+                            {{ home.sectionCases.buttonText }}
                         </a-button>
 
                     </o-wrapper>
@@ -101,7 +93,7 @@
                             tag="h2"
                             level2
                         >
-                            Quem somos
+                            {{ home.sectionAbout.title }}
                         </a-title>
 
                     </o-wrapper>
@@ -114,13 +106,7 @@
                         class="o-section-about-body__wrapper"
                     >
 
-                        <a-text>
-                            Somos a Associação <strong>Anjo da Guarda</strong>, uma entidade não governamental e sem fins lucrativos, que ajuda crianças e adolescentes em situação de vulnerabilidade social, na região de São José do Rio Preto.
-                        </a-text>
-
-                        <a-text>
-                            Promovemos atividades e oficinas de recreação nas áreas de artes, cultura, esporte e lazer, além de fornecer assistência psicológica, social e alimentação para crianças e adolescentes de 6 a 14 anos.
-                        </a-text>
+                        <a-text v-html="$md.render(home.sectionAbout.text)" />
 
                     </o-wrapper>
                 </o-section>
@@ -135,7 +121,7 @@
                             primary
                             large
                         >
-                            Nossa história!
+                            {{ home.sectionAbout.buttonText }}
                         </a-button>
 
                     </o-wrapper>
@@ -163,7 +149,7 @@
                             tag="h2"
                             level2
                         >
-                            Estamos esperando<br> por você!
+                            {{ home.sectionWaiting.title }}
                         </a-title>
 
                     </o-wrapper>
@@ -177,7 +163,7 @@
                     >
 
                         <a-text color="--color-on-primary-hi">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh quam a habitasse et
+                            {{ home.sectionWaiting.text }}
                         </a-text>
 
                     </o-wrapper>
@@ -193,7 +179,7 @@
                             secondary
                             large
                         >
-                            Quero doar!
+                            {{ home.sectionWaiting.buttonText }}
                         </a-button>
 
                     </o-wrapper>
@@ -213,6 +199,15 @@ export default {
 
     components: {
         MCard
+    },
+
+    computed: {
+        home () {
+            return this.$store.state.home
+        },
+        cases () {
+            return this.$store.state.home.sectionCases.cases
+        }
     },
 
     head () {
