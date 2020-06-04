@@ -1,39 +1,39 @@
 {
   "sectionIntro": {
-    "title": "oi",
-    "text": "oi",
-    "buttonText": "oi"
+    "title": "Seja o herói de 130 crianças que precisam de você",
+    "text": "Sua doação ajuda o pequeno Mário e outras 130 crianças a ter um futuro melhor",
+    "buttonText": "Quero ajudar"
   },
   "sectionCases": {
-    "title": "oi",
-    "text": "oi",
+    "title": "Sua ajuda faz a diferença",
+    "text": "Conheça histórias das nossas crianças e adolescentes que mudaram suas perspectivas com uma doação como a sua",
     "cases": [
       {
         "image": "https://ucarecdn.com/e7248e21-653a-41af-a11f-2799a70b5faa/",
-        "title": "asdasdasd",
-        "text": "asdasdasd"
+        "title": "Sua ajuda faz a diferença",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
         "image": "https://ucarecdn.com/04d31f4c-9e12-4742-a8d0-9d105dad7a60/",
-        "title": "adasd",
-        "text": "asdasd"
+        "title": "Sua ajuda faz a diferença",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
         "image": "https://ucarecdn.com/c6dd8844-354f-43c9-ab41-690a1ae149fa/",
-        "title": "asdasd",
-        "text": "asdasd"
+        "title": "Sua ajuda faz a diferença",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       }
     ],
-    "buttonText": "oi"
+    "buttonText": "Doe agora!"
   },
   "sectionAbout": {
-    "title": "oi",
-    "text": "ouououi ouiouiotyutur paosid paoid pasoi dpoasi dpoais pdoias podias podi apsoid poasid",
-    "buttonText": "asd"
+    "title": "quem somos",
+    "text": "A **Associação Anjo da Guarda** é uma entidade não governamental e sem fins lucrativos, que ajuda crianças e adolescentes que vivem em situação de vulnerabilidade social na região de São José do Rio Preto. \n\nPromovemos atividades e oficinas de recreação nas áreas de artes, cultura, esporte e lazer, além de fornecer assistência psicológica, social e alimentação para crianças e adolescentes de 6 a 14 anos.",
+    "buttonText": "Nossa história"
   },
   "sectionWaiting": {
-    "title": "asdasdasdas dpoasi dpoias dp",
-    "text": "a[ps d[paosd [pasod [paso d[pasod[po",
-    "buttonText": "oioi"
+    "title": "Estamos esperando  por você!",
+    "text": "Ajude-nos a resgatar crianças e adolescentes em situação de risco e trazê-los para a escola!",
+    "buttonText": "Quero doar!"
   }
 }
