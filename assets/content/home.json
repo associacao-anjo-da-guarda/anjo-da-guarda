@@ -1,7 +1,7 @@
 {
   "sectionIntro": {
-    "title": "Seja o herói de 130 crianças que precisam de você",
-    "text": "Sua doação ajuda o pequeno Mário e outras 130 crianças a ter um futuro melhor",
+    "title": "Seja o herói de 130 crianças",
+    "text": "Sua doação ajuda o pequeno Mário e outras 130 crianças que precisam de você para ter um futuro melhor",
     "buttonText": "Quero ajudar"
   },
   "sectionCases": {
@@ -28,7 +28,7 @@
   },
   "sectionAbout": {
     "title": "quem somos",
-    "text": "A **Associação Anjo da Guarda** é uma entidade não governamental e sem fins lucrativos, que ajuda crianças e adolescentes que vivem em situação de vulnerabilidade social na região de São José do Rio Preto. \n\nPromovemos atividades e oficinas de recreação nas áreas de artes, cultura, esporte e lazer, além de fornecer assistência psicológica, social e alimentação para crianças e adolescentes de 6 a 14 anos.",
+    "text": "Somos a **Associação Anjo da Guarda,** uma entidade não governamental e sem fins lucrativos, que ajuda crianças e adolescentes em situação de vulnerabilidade social, na região de São José do Rio Preto.\n\n \n\nPromovemos atividades e oficinas de recreação nas áreas de artes, cultura, esporte e lazer, além de fornecer assistência psicológica, social e alimentação para crianças e adolescentes de 6 a 14 anos.",
     "buttonText": "Nossa história"
   },
   "sectionWaiting": {
