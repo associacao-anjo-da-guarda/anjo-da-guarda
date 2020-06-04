@@ -6,56 +6,28 @@
             <o-wrapper
                 padding-section
                 centered-content
-                row-gap-large
+                row-gap-normal
                 boxed
                 class="o-section-intro__wrapper"
             >
 
-                <o-section>
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                    >
+                <a-title
+                    tag="h2"
+                    level2
+                >
+                    {{ home.sectionIntro.title }}
+                </a-title>
 
-                        <a-title
-                            tag="h2"
-                            level2
-                        >
-                            Seja o herói de 130 crianças<br> que precisam de você
-                        </a-title>
+                <a-text color="--color-on-primary-hi">
+                    {{ home.sectionIntro.text }}
+                </a-text>
 
-                    </o-wrapper>
-                </o-section>
-
-                <o-section class="o-section-intro__body">
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                        class="o-section-intro-body__wrapper"
-                    >
-
-                        <a-text color="--color-on-primary-hi">
-                            Sua doação ajuda o pequeno Mário e outras 130 crianças a<br>ter um futuro melhor
-                        </a-text>
-
-                    </o-wrapper>
-                </o-section>
-
-                <o-section>
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                    >
-
-                        <a-button
-                            secondary
-                            large
-                        >
-                            Quero ajudar
-                        </a-button>
-
-                    </o-wrapper>
-                </o-section>
+                <a-button
+                    secondary
+                    large
+                >
+                    {{ home.sectionIntro.buttonText }}
+                </a-button>
 
             </o-wrapper>
         </o-section>
@@ -129,53 +101,25 @@
             <o-wrapper
                 padding-section
                 centered-content
-                row-gap-large
+                row-gap-normal
                 boxed
             >
 
-                <o-section>
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                    >
+                <a-title
+                    tag="h2"
+                    level2
+                >
+                    {{ home.sectionAbout.title }}
+                </a-title>
 
-                        <a-title
-                            tag="h2"
-                            level2
-                        >
-                            {{ home.sectionAbout.title }}
-                        </a-title>
+                <a-text v-html="$md.render(home.sectionAbout.text)" />
 
-                    </o-wrapper>
-                </o-section>
-
-                <o-section class="o-section-about__body">
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                        class="o-section-about-body__wrapper"
-                    >
-
-                        <a-text v-html="$md.render(home.sectionAbout.text)" />
-
-                    </o-wrapper>
-                </o-section>
-
-                <o-section>
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                    >
-
-                        <a-button
-                            primary
-                            large
-                        >
-                            {{ home.sectionAbout.buttonText }}
-                        </a-button>
-
-                    </o-wrapper>
-                </o-section>
+                <a-button
+                    primary
+                    large
+                >
+                    {{ home.sectionAbout.buttonText }}
+                </a-button>
 
             </o-wrapper>
         </o-section>
@@ -184,56 +128,28 @@
             <o-wrapper
                 padding-section
                 centered-content
-                row-gap-large
+                row-gap-normal
                 boxed
                 class="o-section-waiting__wrapper"
             >
 
-                <o-section>
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                    >
+                <a-title
+                    tag="h2"
+                    level2
+                >
+                    {{ home.sectionWaiting.title }}
+                </a-title>
 
-                        <a-title
-                            tag="h2"
-                            level2
-                        >
-                            {{ home.sectionWaiting.title }}
-                        </a-title>
+                <a-text color="--color-on-primary-hi">
+                    {{ home.sectionWaiting.text }}
+                </a-text>
 
-                    </o-wrapper>
-                </o-section>
-
-                <o-section class="o-section-waiting__body">
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                        class="o-section-waiting-body__wrapper"
-                    >
-
-                        <a-text color="--color-on-primary-hi">
-                            {{ home.sectionWaiting.text }}
-                        </a-text>
-
-                    </o-wrapper>
-                </o-section>
-
-                <o-section>
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                    >
-
-                        <a-button
-                            secondary
-                            large
-                        >
-                            {{ home.sectionWaiting.buttonText }}
-                        </a-button>
-
-                    </o-wrapper>
-                </o-section>
+                <a-button
+                    secondary
+                    large
+                >
+                    {{ home.sectionWaiting.buttonText }}
+                </a-button>
 
             </o-wrapper>
         </o-section>
@@ -296,12 +212,13 @@ export default {
             rgba(212, 17, 63, 0) 0%,
             #d4113f 61.46%
         ),
-        url("~assets/girl-holding-dandelion-flower.jpg") no-repeat top center;
+        url("~assets/girl-holding-dandelion-flower.jpg") no-repeat center;
     background-size: cover;
+    /* background-position: 50% -100px; */
 }
 
 .o-section-intro__wrapper {
-    height: calc(140vh - 85px);
+    height: 100vh;
     align-content: end;
 }
 
