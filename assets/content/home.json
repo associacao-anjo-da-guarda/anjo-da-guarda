@@ -6,6 +6,23 @@
   },
   "sectionCases": {
     "title": "oi",
-    "text": "oi"
+    "text": "oi",
+    "cases": [
+      {
+        "image": "https://ucarecdn.com/2538beed-0c13-428c-b7fb-b15b780f62ab/",
+        "title": "asdasdasd",
+        "text": "asdasdasd"
+      },
+      {
+        "image": "https://ucarecdn.com/23735002-23b5-4cb0-8f85-7e9662ff50d5/",
+        "title": "adasd",
+        "text": "asdasd"
+      },
+      {
+        "image": "https://ucarecdn.com/11454b73-46ad-4b89-965e-750d48de766b/-/preview/",
+        "title": "asdasd",
+        "text": "asdasd"
+      }
+    ]
   }
 }
