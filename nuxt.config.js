@@ -56,9 +56,15 @@ export default {
     /*
    ** Nuxt.js modules
    */
-    modules: ['@nuxtjs/markdownit'],
+    modules: ['@nuxtjs/markdownit', '@nuxtjs/pwa'],
     markdownit: {
         injected: true
+    },
+    pwa: {
+        manifest: {
+            name: 'Anjo da Guarda',
+            short_name: 'Anjo'
+        }
     },
     /*
    ** Build configuration
