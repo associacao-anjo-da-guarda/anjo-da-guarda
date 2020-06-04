@@ -112,7 +112,9 @@
                     {{ home.sectionAbout.title }}
                 </a-title>
 
-                <a-text v-html="$md.render(home.sectionAbout.text)" />
+                <client-only>
+                    <a-text v-html="$md.render(home.sectionAbout.text)" />
+                </client-only>
 
                 <a-button
                     primary
