@@ -9,20 +9,31 @@
     "text": "oi",
     "cases": [
       {
-        "image": "https://ucarecdn.com/2538beed-0c13-428c-b7fb-b15b780f62ab/",
+        "image": "https://ucarecdn.com/e7248e21-653a-41af-a11f-2799a70b5faa/",
         "title": "asdasdasd",
         "text": "asdasdasd"
       },
       {
-        "image": "https://ucarecdn.com/23735002-23b5-4cb0-8f85-7e9662ff50d5/",
+        "image": "https://ucarecdn.com/04d31f4c-9e12-4742-a8d0-9d105dad7a60/",
         "title": "adasd",
         "text": "asdasd"
       },
       {
-        "image": "https://ucarecdn.com/11454b73-46ad-4b89-965e-750d48de766b/-/preview/",
+        "image": "https://ucarecdn.com/c6dd8844-354f-43c9-ab41-690a1ae149fa/",
         "title": "asdasd",
         "text": "asdasd"
       }
-    ]
+    ],
+    "buttonText": "oi"
+  },
+  "sectionAbout": {
+    "title": "oi",
+    "text": "ouououi ouiouiotyutur paosid paoid pasoi dpoasi dpoais pdoias podias podi apsoid poasid",
+    "buttonText": "asd"
+  },
+  "sectionWaiting": {
+    "title": "asdasdasdas dpoasi dpoias dp",
+    "text": "a[ps d[paosd [pasod [paso d[pasod[po",
+    "buttonText": "oioi"
   }
 }
