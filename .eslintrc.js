@@ -26,7 +26,8 @@ module.exports = {
         semi: ['error', 'never', {
             beforeStatementContinuationChars: 'never'
         }],
-        'no-console': process.env.NODE_ENV === 'production' ? 'on' : 'off'
+        'no-console': process.env.NODE_ENV === 'production' ? 'on' : 'off',
+        'vue/no-v-html': 'off'
         // "space-before-function-paren": ["error", "never"],
     }
 }

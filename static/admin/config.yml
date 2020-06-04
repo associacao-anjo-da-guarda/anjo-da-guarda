@@ -10,6 +10,13 @@ media_library:
   config:
     publicKey: ef4aabe94d3c70720696
 
+site_url: https://projetoanjodaguarda.org
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
 collections:
   - name: 'blog'
     label: 'Blog'
@@ -24,3 +31,81 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - label: "Páginas"
+    name: "paginas"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "assets/content/home.json"
+        fields:
+          - label: 'Seção Intro'
+            name: 'sectionIntro'
+            widget: 'object'
+            fields:
+              - {
+                  label: 'Título',
+                  name: 'title',
+                  widget: 'string'
+                }
+              - { 
+                  label: 'Texto', 
+                  name: 'text', 
+                  widget: 'string' 
+                }
+              - {
+                  label: 'Texto do botão',
+                  name: 'buttonText',
+                  widget: 'string',
+                }
+
+          - label: 'Seção Cases'
+            name: 'sectionCases'
+            widget: 'object'
+            fields:
+              - { label: 'Título', name: 'title', widget: 'string' }
+              - { label: 'Texto', name: 'text', widget: 'string' }
+              - label: 'Cases'
+                name: 'cases' 
+                widget: 'list'
+                allow_add: true
+                collapsed: false
+                fields:
+                  - {
+                      label: 'Foto',
+                      name: 'image',
+                      widget: 'image'
+                  }
+                  - {
+                      label: 'Título',
+                      name: 'title',
+                      widget: 'string'
+                  }
+                  - {
+                      label: 'Texto',
+                      name: 'text',
+                      widget: 'string'
+                  }
+              - label: 'Texto do botão'
+                name: 'buttonText'
+                widget: 'string'
+
+          - label: 'Seção Quem Somos'
+            name: 'sectionAbout'
+            widget: 'object'
+            fields:
+              - { label: 'Título', name: 'title', widget: 'string' }
+              - { label: 'Texto', name: 'text', widget: 'markdown' }
+              - label: 'Texto do botão'
+                name: 'buttonText'
+                widget: 'string'
+
+          - label: 'Seção Final'
+            name: 'sectionWaiting'
+            widget: 'object'
+            fields:
+              - { label: 'Título', name: 'title', widget: 'string' }
+              - { label: 'Texto', name: 'text', widget: 'string' }
+              - label: 'Texto do botão'
+                name: 'buttonText'
+                widget: 'string'
