@@ -9,6 +9,7 @@ media_library:
   name: uploadcare
   config:
     publicKey: ef4aabe94d3c70720696
+    imageShrink: 1600x1600 70%
 
 site_url: https://projetoanjodaguarda.org
 
