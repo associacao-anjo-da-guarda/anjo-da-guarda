@@ -12,8 +12,8 @@
             >
 
                 <a-title
-                    tag="h2"
-                    level2
+                    tag="h1"
+                    level1
                 >
                     {{ home.sectionIntro.title }}
                 </a-title>
