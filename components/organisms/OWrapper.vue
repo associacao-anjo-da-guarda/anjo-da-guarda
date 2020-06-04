@@ -83,15 +83,18 @@ export default {
 }
 
 .o-wrapper--row-gap--normal {
-    row-gap: calc(var(--space-grid) * 2);
+    /* row-gap: calc(var(--space-grid) * 2); */
+    row-gap: calc(var(--space) * 1);
 }
 
 .o-wrapper--row-gap--small {
-    row-gap: calc(var(--space-grid) * 1);
+    /* row-gap: calc(var(--space-grid) * 1); */
+    row-gap: calc(var(--space) / 2);
 }
 
 .o-wrapper--row-gap--large {
-    row-gap: calc(var(--space-grid) * 4);
+    /* row-gap: calc(var(--space-grid) * 4); */
+    row-gap: calc(var(--space) * 2);
 }
 
 .o-wrapper--boxed {
