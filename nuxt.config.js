@@ -86,12 +86,23 @@ export default {
     generate: {
         routes () {
             const fs = require('fs')
-            return fs.readdirSync('./assets/content/blog').map((file) => {
+            const blogRoutes = fs.readdirSync('./assets/content/blog').map((file) => {
                 return {
                     route: `/blog/${file.slice(2, -5)}`,
                     payload: require(`./assets/content/blog/${file}`)
                 }
             })
+            const eventRoutes = fs.readdirSync('./assets/content/events').map((file) => {
+                return {
+                    route: `/events/${file.slice(2, -5)}`,
+                    payload: require(`./assets/content/events/${file}`)
+                }
+            })
+
+            return [
+                ...blogRoutes,
+                ...eventRoutes
+            ]
         }
     },
 
