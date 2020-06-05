@@ -33,6 +33,48 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
+  - name: 'events'
+    label: 'Eventos'
+    folder: 'assets/content/events'
+    create: true
+    format: 'json'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Foto', name: 'image', widget: 'image' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Data do Evento', name: 'date', widget: 'datetime' }
+      - { label: 'Descrição', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Foto da Galeria'
+        name: 'galleryMedia'
+        widget: 'list'
+        allow_add: true
+        collapsed: false
+        fields:
+          - {
+              label: 'Foto',
+              name: 'image',
+              widget: 'image'
+          }
+          - {
+              label: 'Título (google)',
+              name: 'title',
+              widget: 'string'
+          }
+          - {
+              label: 'Texto ALT (google)',
+              name: 'altText',
+              widget: 'string'
+          }
+          - {
+              label: 'Legenda (opcional)',
+              name: 'description',
+              widget: 'string'
+          }
+
+
   - label: "Páginas"
     name: "paginas"
     format: 'json'
