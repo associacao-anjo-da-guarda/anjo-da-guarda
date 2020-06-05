@@ -155,7 +155,7 @@ export default {
 }
 @media screen and (min-width: 1200px) {
     .o-section-intro-body__wrapper {
-        grid-template-columns: repeat(auto-fill, minmax(19rem, auto));
+        grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
         justify-content: center;
         column-gap: calc(var(--space-grid) * 3);
     }

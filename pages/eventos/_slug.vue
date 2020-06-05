@@ -144,7 +144,7 @@ export default {
 
 .o-section-intro-gallery__wrapper {
     gap: calc(var(--space-grid) * 0.5);
-    grid-template-columns: repeat(auto-fill, minmax(19rem, auto));
+    grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
     justify-content: center;
 }
 </style>

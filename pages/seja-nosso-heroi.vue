@@ -149,7 +149,7 @@ export default {
 <style scoped>
 @media screen and (min-width: 1200px) {
     .o-section-cases-body__wrapper {
-        grid-template-columns: repeat(auto-fill, minmax(19rem, auto));
+        grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
         justify-content: center;
         column-gap: calc(var(--space-grid) * 3);
     }
