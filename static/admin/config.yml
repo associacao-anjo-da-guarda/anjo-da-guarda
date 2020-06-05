@@ -34,7 +34,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'events'
-    label: 'Eventos'
+    label: 'Evento'
     folder: 'assets/content/events'
     create: true
     format: 'json'
@@ -76,7 +76,7 @@ collections:
 
 
   - name: 'galleries'
-    label: 'Galerias'
+    label: 'Galeria'
     folder: 'assets/content/galleries'
     create: true
     format: 'json'
@@ -117,7 +117,7 @@ collections:
           }
 
 
-  - label: "Páginas"
+  - label: "Página"
     name: "paginas"
     format: 'json'
     files:
