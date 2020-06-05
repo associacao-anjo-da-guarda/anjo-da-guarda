@@ -32,7 +32,7 @@
                     outlined
                     fit-content
                     large
-                    href="#"
+                    to="/seja-nosso-heroi"
                 >
                     Quero ser herói
                 </a-button>

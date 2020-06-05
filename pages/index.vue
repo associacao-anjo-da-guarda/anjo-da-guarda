@@ -25,6 +25,7 @@
                 <a-button
                     secondary
                     large
+                    to="/seja-nosso-heroi"
                 >
                     {{ home.sectionIntro.buttonText }}
                 </a-button>
@@ -87,6 +88,7 @@
                         <a-button
                             secondary
                             large
+                            to="/seja-nosso-heroi"
                         >
                             {{ home.sectionCases.buttonText }}
                         </a-button>
@@ -119,6 +121,7 @@
                 <a-button
                     primary
                     large
+                    to="/seja-nosso-heroi"
                 >
                     {{ home.sectionAbout.buttonText }}
                 </a-button>
@@ -149,6 +152,7 @@
                 <a-button
                     secondary
                     large
+                    to="/seja-nosso-heroi"
                 >
                     {{ home.sectionWaiting.buttonText }}
                 </a-button>

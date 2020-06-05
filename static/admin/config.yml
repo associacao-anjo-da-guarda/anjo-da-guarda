@@ -189,3 +189,18 @@ collections:
               widget: 'string',
             }
 
+      # - label: "Seja Nosso heroi"
+      #   name: "seja-nosso-heroi"
+      #   file: "assets/content/sejaNossoHeroi.json"
+      #   fields:
+      #     - {
+      #         label: 'Foto',
+      #         name: 'image',
+      #         widget: 'image'
+      #       }
+      #     - {
+      #         label: 'Título',
+      #         name: 'title',
+      #         widget: 'string'
+      #       }
+
