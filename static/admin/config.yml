@@ -110,3 +110,39 @@ collections:
               - label: 'Texto do botão'
                 name: 'buttonText'
                 widget: 'string'
+
+      - label: "Quem Somos"
+        name: "about"
+        file: "assets/content/about.json"
+        fields:
+          - {
+              label: 'Foto',
+              name: 'image',
+              widget: 'image'
+            }
+          - {
+              label: 'Título',
+              name: 'title',
+              widget: 'string'
+            }
+          - { 
+              label: 'Texto', 
+              name: 'text', 
+              widget: 'markdown' 
+            }
+          - {
+              label: 'Texto do botão 1',
+              name: 'button1Text',
+              widget: 'string',
+            }
+          - {
+              label: 'Texto do botão 2',
+              name: 'button2Text',
+              widget: 'string',
+            }
+          - {
+              label: 'Texto do botão CTA',
+              name: 'buttonCtaText',
+              widget: 'string',
+            }
+
