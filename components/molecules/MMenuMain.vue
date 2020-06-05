@@ -65,7 +65,7 @@
                 <a-button
                     text
                     large
-                    to="/"
+                    to="/galerias"
                     class="m-menu__item"
                 >
                     Galeria
