@@ -1,0 +1,39 @@
+{
+  "date": "2020-06-05T20:47:19.294Z",
+  "image": "https://ucarecdn.com/4a8c6e1c-cbd5-4892-8ebb-0632565b243b/",
+  "title": "Nossa sede",
+  "description": "Fotos da nossa sede",
+  "galleryMedias": [
+    {
+      "image": "https://ucarecdn.com/2e0d543e-df47-4b58-939a-a1eb0436fb58/-/preview/-/enhance/100/",
+      "title": "Mini campo de futebol",
+      "altText": "Mini campo de futebol",
+      "description": "Mini campo de futebol"
+    },
+    {
+      "image": "https://ucarecdn.com/3f89e5ae-382e-450e-90aa-a6f0ebcc8f7b/",
+      "title": "Quadro de avisos",
+      "altText": "Quadro de avisos",
+      "description": "Quadro de avisos"
+    },
+    {
+      "image": "https://ucarecdn.com/9f732229-06ea-4e27-b990-633883a5f256/-/preview/-/enhance/50/",
+      "title": "Área de convivência",
+      "altText": "Área de convivência",
+      "description": "Área de convivência"
+    },
+    {
+      "image": "https://ucarecdn.com/f57454f7-8955-47ea-bd9b-4975f42c357e/-/preview/-/enhance/50/",
+      "title": "Entrada lateral",
+      "altText": "Entrada lateral",
+      "description": "Entrada lateral"
+    },
+    {
+      "image": "https://ucarecdn.com/f032df15-dce5-4fdb-8c55-2a237e91e7e1/-/preview/-/enhance/50/",
+      "title": "Letreiro da frente",
+      "altText": "Letreiro da frente",
+      "description": "Letreiro da frente"
+    }
+  ],
+  "body": "Fotos da nossa sede"
+}
