@@ -1,21 +1,18 @@
-# 🏞 Nuxt & Netlify CMS Starter
 
-A lot of the starter repos for **Nuxt x Netlify CMS** use a module like `nuxtent` or `nuxtdown` to manage flat file content. This project is meant to be a solution for those who don't mind doing a little more configuration to not have to rely on these dependencies.
+# PWA - Associação Anjo da Guarda
+
+Associação Anjos da Guarda is migrating you old site (https://anjodaguardaprojeto.wixsite.com/anjo) to a new modern PWA app: https://projetoanjodaguarda.org
 
 ## 🎉 Getting Started
 
-The quickest way to get started is with Netlify's hyper-convenient **one-click Deploy To Netlify**, which will automatically create an instance of this project on your GitHub account and deploy it instantly to Netlify.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/xdesro/nuxt-netlify-cms-starter)
-
-Otherwise, you can follow these steps!
+**How to run the project**
 
 1. 👯‍♂️ Clone the repository locally and cd into the directory.
 
 ```bash
-git clone https://github.com/xdesro/nuxt-netlify-cms-starter
+git clone https://github.com/associacao-anjo-da-guarda/anjo-da-guarda.git
 
-cd nuxt-netlify-cms-starter
+cd anjo-da-guarda
 ```
 
 2. 📦 Install dependencies.
@@ -45,11 +42,11 @@ yarn start
 yarn generate
 ```
 
-> This project was bootstrapped with `create-nuxt-app`. There are more detailed explanations of how everything works in the [Nuxt.js docs](https://nuxtjs.org).
+> This projet is using Netlify CMS (netlifycms.org/).
 
 ## 🖋 Activating Netlify CMS
 
-This project comes with Netlify CMS ready to rumble, and a basic blog configuration. To use Netlify CMS:
+This project comes with Netlify CMS. To use Netlify CMS:
 
 ### 🔏 Authenticating with Netlify Identity
 
@@ -60,9 +57,10 @@ This project comes with Netlify CMS ready to rumble, and a basic blog configurat
 5. Scroll down to **Services** and click **Enable Git Gateway**.
 
 ### 🔏 Media configuration
-The default configuration expects you to run on Netlify's Large Media, which uses Git LFS. To configure this yourself read up on it here:
-* [documentation](https://docs.netlify.com/large-media/overview/)
-or directly set it up by following [these](https://docs.netlify.com/large-media/setup/#configure-file-tracking) steps
+
+We are using Uploadcare to handle image hosting: [https://uploadcare.com/](https://uploadcare.com/)
+
+You can read this docs to setup uploadcare to your own: [https://www.netlifycms.org/docs/uploadcare/](https://www.netlifycms.org/docs/uploadcare/)
 
 ### 🔐 Local Setup
 
@@ -70,6 +68,9 @@ or directly set it up by following [these](https://docs.netlify.com/large-media/
 2. Enter the Netlify URL of your site when prompted. (when using a different domainname host, use be sure to use the URL as provided by Netlify, not your domain host)
 3. Login with the account you created or one of the external providers, if you enabled them.
 
-## 💁‍♀️ Questions? Concerns?
+## 💁‍♀️ Questions?
 
-Feel free to reach out [on Twitter](https://twitter.com/xdesro). Friendly feedback and advice is always welcome. Contributions doubly so.
+Contact us on linkedin: 
+
+Paulo Moreira: [https://www.linkedin.com/in/pmoreiralk/](https://www.linkedin.com/in/pmoreiralk/)
+Guilherme Carneiro: [https://www.linkedin.com/in/guilherme-soares-carneiro/](https://www.linkedin.com/in/guilherme-soares-carneiro/)
