@@ -121,7 +121,7 @@
                 <a-button
                     primary
                     large
-                    to="/seja-nosso-heroi"
+                    to="/quem-somos"
                 >
                     {{ home.sectionAbout.buttonText }}
                 </a-button>

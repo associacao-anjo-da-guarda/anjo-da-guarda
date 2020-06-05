@@ -49,7 +49,7 @@
                         row-gap-normal
                     >
 
-                        <a-button
+                        <!-- <a-button
                             outlined
                             large
                             to="/transparencia"
@@ -63,11 +63,12 @@
                             to="/contato"
                         >
                             {{ about.button2Text }}
-                        </a-button>
+                        </a-button> -->
 
                         <a-button
                             secondary
                             large
+                            to="/seja-nosso-heroi"
                         >
                             {{ about.buttonCtaText }}
                         </a-button>

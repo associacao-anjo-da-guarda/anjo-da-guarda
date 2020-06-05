@@ -38,7 +38,7 @@
 
         <li class="social-icon">
             <a
-                href="https://wa.me/5584994026041"
+                href="https://wa.me/5517997730213"
                 target="_blank"
                 rel="nooppener nofollow"
             >
@@ -61,36 +61,33 @@ export default {
 </script>
 
 <style scoped>
-
 /* social-icons */
 .social-icons {
-  display: none;
-  margin:0;
-  padding: 0;
-  list-style-type: none;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 @media screen and (min-width: 600px) {
-  .social-icons {
-    display: grid;
-    grid-template-columns: repeat(3, 24px);
-    grid-template-rows: 24px;
-    grid-column-gap: var(--space, 1.5rem);
-    align-self: center;
-    justify-content: center;
-  }
+    .social-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 24px);
+        grid-template-rows: 24px;
+        grid-column-gap: var(--space, 1.5rem);
+        align-self: center;
+        justify-content: center;
+    }
 }
 @media screen and (min-width: 1200px) {
-  .social-icons {
-    grid-column-gap: 60px;
-  }
+    .social-icons {
+        grid-column-gap: 60px;
+    }
 }
 
 /* social-icon */
 @media screen and (min-width: 600px) {
-  .social-icon {
-    justify-self: end;
-  }
-
+    .social-icon {
+        justify-self: end;
+    }
 }
-
 </style>
