@@ -75,6 +75,48 @@ collections:
           }
 
 
+  - name: 'galleries'
+    label: 'Galerias'
+    folder: 'assets/content/galleries'
+    create: true
+    format: 'json'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Foto', name: 'image', widget: 'image' }
+      - { label: 'Título', name: 'title', widget: 'string' }
+      - { label: 'Data da galeria', name: 'date', widget: 'datetime' }
+      - { label: 'Descrição', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Fotos da Galeria'
+        name: 'galleryMedias'
+        widget: 'list'
+        allow_add: true
+        collapsed: false
+        fields:
+          - {
+              label: 'Foto',
+              name: 'image',
+              widget: 'image'
+          }
+          - {
+              label: 'Título (google)',
+              name: 'title',
+              widget: 'string'
+          }
+          - {
+              label: 'Texto ALT (google)',
+              name: 'altText',
+              widget: 'string'
+          }
+          - {
+              label: 'Legenda (opcional)',
+              name: 'description',
+              widget: 'string'
+          }
+
+
   - label: "Páginas"
     name: "paginas"
     format: 'json'
