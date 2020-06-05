@@ -43,7 +43,7 @@
                 <a-button
                     text
                     large
-                    to="/transparencia/"
+                    to="/"
                     class="m-menu__item"
                 >
                     Transparência
@@ -54,7 +54,7 @@
                 <a-button
                     text
                     large
-                    to="/eventos/"
+                    to="/"
                     class="m-menu__item"
                 >
                     Eventos
@@ -65,7 +65,7 @@
                 <a-button
                     text
                     large
-                    to="/galeria/"
+                    to="/"
                     class="m-menu__item"
                 >
                     Galeria
@@ -76,7 +76,7 @@
                 <a-button
                     text
                     large
-                    to="/parceiros/"
+                    to="/"
                     class="m-menu__item"
                 >
                     Parceiros
@@ -87,7 +87,7 @@
                 <a-button
                     text
                     large
-                    to="/contato/"
+                    to="/"
                     class="m-menu__item"
                 >
                     Contato
@@ -115,7 +115,6 @@ export default {
 </script>
 
 <style scoped>
-
 /* m-menu component */
 .m-menu {
     z-index: 20000;
@@ -132,24 +131,23 @@ export default {
     background-color: var(--color-bg);
     color: var(--color-onBg);
 }
-    /* items */
-    .m-menu__items {
-        width: 100%;
-        display: grid;
-        grid-row-gap: var(--space-grid);
-        justify-items: center;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    /* item */
-    .m-menu__item {
-        align-self: start;
-    }
-    /* buttonClose */
-    .m-menu__buttonClose {
-        justify-self: start;
-        padding: 0;
-    }
-
+/* items */
+.m-menu__items {
+    width: 100%;
+    display: grid;
+    grid-row-gap: var(--space-grid);
+    justify-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/* item */
+.m-menu__item {
+    align-self: start;
+}
+/* buttonClose */
+.m-menu__buttonClose {
+    justify-self: start;
+    padding: 0;
+}
 </style>
