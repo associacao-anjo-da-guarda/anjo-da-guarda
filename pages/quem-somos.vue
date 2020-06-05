@@ -36,11 +36,9 @@
                 </o-section>
 
                 <o-section>
-                    <o-wrapper>
+                    <o-wrapper class="o-section-intro__body">
 
-                        <a-text color="--color-on-primary-hi">
-                            {{ about.body }}
-                        </a-text>
+                        <a-text v-html="$md.render(about.body)" />
 
                     </o-wrapper>
                 </o-section>
@@ -129,6 +127,11 @@ export default {
     .section-illustration {
         position: fixed;
         bottom: 0;
+        z-index: -1000;
     }
+}
+
+.o-section-intro__body {
+    max-width: 43.75rem;
 }
 </style>
