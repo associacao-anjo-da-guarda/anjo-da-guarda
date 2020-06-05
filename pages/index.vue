@@ -113,7 +113,7 @@
                 </a-title>
 
                 <client-only>
-                    <a-text v-html="$md.render(home.sectionAbout.text)" />
+                    <a-text v-html="$md.render(home.sectionAbout.body)" />
                 </client-only>
 
                 <a-button

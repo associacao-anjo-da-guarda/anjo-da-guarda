@@ -15,7 +15,7 @@
             :src="getSrc"
             :srcset="getSrcset"
             :alt="alt"
-            :style="{'--width': width, '--height': height }"
+            :style="{'--width': width, '--height': height, '--margin': margin }"
         >
         <slot />
     </component>
@@ -41,6 +41,10 @@ export default {
             default: '100%'
         },
         height: {
+            type: String,
+            default: 'auto'
+        },
+        margin: {
             type: String,
             default: 'auto'
         },
@@ -101,7 +105,7 @@ export default {
     width: var(--width, 100%);
     max-width: 100%;
     height: var(--height, auto);
-    margin: auto;
+    margin: var(--margin, auto);
 }
 .a-image--bg {
     background-repeat: no-repeat;
