@@ -47,8 +47,8 @@ collections:
       - { label: 'Data do Evento', name: 'date', widget: 'datetime' }
       - { label: 'Descrição', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Foto da Galeria'
-        name: 'galleryMedia'
+      - label: 'Fotos da Galeria'
+        name: 'galleryMedias'
         widget: 'list'
         allow_add: true
         collapsed: false
@@ -189,18 +189,4 @@ collections:
               widget: 'string',
             }
 
-      # - label: "Seja Nosso heroi"
-      #   name: "seja-nosso-heroi"
-      #   file: "assets/content/sejaNossoHeroi.json"
-      #   fields:
-      #     - {
-      #         label: 'Foto',
-      #         name: 'image',
-      #         widget: 'image'
-      #       }
-      #     - {
-      #         label: 'Título',
-      #         name: 'title',
-      #         widget: 'string'
-      #       }
 
