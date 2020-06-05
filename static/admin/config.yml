@@ -35,6 +35,7 @@ collections:
 
   - label: "Páginas"
     name: "paginas"
+    format: 'json'
     files:
       - label: "Home"
         name: "home"
@@ -96,7 +97,7 @@ collections:
             widget: 'object'
             fields:
               - { label: 'Título', name: 'title', widget: 'string' }
-              - { label: 'Texto', name: 'text', widget: 'markdown' }
+              - { label: 'Texto', name: 'body', widget: 'markdown' }
               - label: 'Texto do botão'
                 name: 'buttonText'
                 widget: 'string'
@@ -127,7 +128,7 @@ collections:
             }
           - { 
               label: 'Texto', 
-              name: 'text', 
+              name: 'body', 
               widget: 'markdown' 
             }
           - {
