@@ -54,7 +54,7 @@
                 <a-button
                     text
                     large
-                    to="/"
+                    to="/eventos"
                     class="m-menu__item"
                 >
                     Eventos
