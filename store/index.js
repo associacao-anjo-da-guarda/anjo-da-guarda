@@ -2,7 +2,8 @@ export const state = () => ({
     blogPosts: [],
     home: {},
     about: {},
-    events: []
+    events: [],
+    galleries: []
 })
 
 export const mutations = {
@@ -17,6 +18,9 @@ export const mutations = {
     },
     setEvents (state, events) {
         state.events = events
+    },
+    setGalleries (state, galleries) {
+        state.galleries = galleries
     }
 }
 
@@ -30,6 +34,12 @@ export const actions = {
 
         const eventFiles = await require.context(
             '~/assets/content/events/',
+            false,
+            /\.json$/
+        )
+
+        const galleryFiles = await require.context(
+            '~/assets/content/galleries/',
             false,
             /\.json$/
         )
@@ -56,12 +66,21 @@ export const actions = {
             res.slug = key.slice(2, -5)
             return res
         })
+        const galleries = galleryFiles.keys().map((key) => {
+            const res = galleryFiles(key)
+
+            // console.log('galleryFiles(key)', galleryFiles(key))
+
+            res.slug = key.slice(2, -5)
+            return res
+        })
 
         // console.log('blogPosts', blogPosts)
         // console.log('events', events)
 
         await commit('setBlogPosts', blogPosts)
         await commit('setEvents', events)
+        await commit('setGalleries', galleries)
         await commit('setHome', home)
         await commit('setAbout', about)
     }

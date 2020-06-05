@@ -94,14 +94,21 @@ export default {
             })
             const eventRoutes = fs.readdirSync('./assets/content/events').map((file) => {
                 return {
-                    route: `/events/${file.slice(2, -5)}`,
+                    route: `/eventos/${file.slice(2, -5)}`,
                     payload: require(`./assets/content/events/${file}`)
+                }
+            })
+            const galleryRoutes = fs.readdirSync('./assets/content/galleries').map((file) => {
+                return {
+                    route: `/galerias/${file.slice(2, -5)}`,
+                    payload: require(`./assets/content/galleries/${file}`)
                 }
             })
 
             return [
                 ...blogRoutes,
-                ...eventRoutes
+                ...eventRoutes,
+                ...galleryRoutes
             ]
         }
     },
