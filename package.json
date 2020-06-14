@@ -1,8 +1,8 @@
 {
-  "name": "nuxt-netlify-cms-starter",
-  "version": "1.0.0",
-  "description": "A very Spartan boilerplate for using Netlify CMS/static content files with Nuxt.js.",
-  "author": "Henry Desroches <yo@henry.codes> (https://henry.codes)",
+  "name": "pwa-anjo-da-guarda",
+  "version": "1.0.1",
+  "description": "Associação Anjo da guarda PWA",
+  "author": "Paulo Moreira <pmoreira@firenzze.com> (https://firenzze.com)",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -14,11 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xdesro/nuxt-netlify-cms-starter#readme"
+    "url": "https://github.com/associacao-anjo-da-guarda/anjo-da-guarda.git"
   },
   "license": "MIT",
   "dependencies": {
-    "@nuxtjs/markdownit": "^1.2.6",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "nuxt": "^2.11.0"
   },

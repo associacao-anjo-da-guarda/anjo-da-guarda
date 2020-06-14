@@ -84,34 +84,34 @@ export default {
     },
 
     generate: {
-        fallback: '404.html', // Netlify reads a 404.html, Nuxt will load as an SPA
-        routes () {
-            const fs = require('fs')
-            const blogRoutes = fs.readdirSync('./assets/content/blog').map((file) => {
-                return {
-                    route: `/blog/${file.slice(2, -5)}`,
-                    payload: require(`./assets/content/blog/${file}`)
-                }
-            })
-            const eventRoutes = fs.readdirSync('./assets/content/events').map((file) => {
-                return {
-                    route: `/eventos/${file.slice(2, -5)}`,
-                    payload: require(`./assets/content/events/${file}`)
-                }
-            })
-            const galleryRoutes = fs.readdirSync('./assets/content/galleries').map((file) => {
-                return {
-                    route: `/galerias/${file.slice(2, -5)}`,
-                    payload: require(`./assets/content/galleries/${file}`)
-                }
-            })
+        fallback: '404.html' // Netlify reads a 404.html, Nuxt will load as an SPA
+        // routes () {
+        //     const fs = require('fs')
+        //     const blogRoutes = fs.readdirSync('./assets/content/blog').map((file) => {
+        //         return {
+        //             route: `/blog/${file.slice(2, -5)}`,
+        //             payload: require(`./assets/content/blog/${file}`)
+        //         }
+        //     })
+        //     const eventRoutes = fs.readdirSync('./assets/content/events').map((file) => {
+        //         return {
+        //             route: `/eventos/${file.slice(2, -5)}`,
+        //             payload: require(`./assets/content/events/${file}`)
+        //         }
+        //     })
+        //     const galleryRoutes = fs.readdirSync('./assets/content/galleries').map((file) => {
+        //         return {
+        //             route: `/galerias/${file.slice(2, -5)}`,
+        //             payload: require(`./assets/content/galleries/${file}`)
+        //         }
+        //     })
 
-            return [
-                ...blogRoutes,
-                ...eventRoutes,
-                ...galleryRoutes
-            ]
-        }
+        //     return [
+        //         ...blogRoutes,
+        //         ...eventRoutes,
+        //         ...galleryRoutes
+        //     ]
+        // }
     },
 
     /*
@@ -139,10 +139,10 @@ export default {
     /*
    ** Nuxt.js modules
    */
-    modules: ['@nuxtjs/markdownit', '@nuxtjs/pwa'],
-    markdownit: {
-        injected: true
-    },
+    modules: [
+        '@nuxtjs/pwa'
+    ],
+    // @nuxt/pwa module options
     pwa: {
         manifest: {
             name: 'Anjo da Guarda',
