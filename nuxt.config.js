@@ -134,20 +134,33 @@ export default {
     buildModules: [
         ['@nuxtjs/google-analytics', {
             id: 'UA-26818222-5'
-        }]
+        }],
+        // modules for full static before `nuxt export` (coming in v2.12)
+        '@/modules/static',
+        '@/modules/crawler'
     ],
     /*
    ** Nuxt.js modules
    */
     modules: [
-        '@nuxtjs/pwa'
+        '@nuxtjs/pwa',
+        // https://prismic-nuxt.js.org/
+        '@nuxtjs/prismic'
     ],
-    // @nuxt/pwa module options
+    // @nuxtjs/pwa module options
     pwa: {
         manifest: {
             name: 'Anjo da Guarda',
             short_name: 'Anjo'
         }
+    },
+    // @nuxtjs/prismic module options
+    prismic: {
+        endpoint: 'https://anjo.cdn.prismic.io/api/v2',
+        linkResolver: '@/plugins/link-resolver',
+        htmlSerializer: '@/plugins/html-serializer',
+        components: false,
+        preview: false
     },
     /*
    ** Build configuration
