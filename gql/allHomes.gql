@@ -1,0 +1,86 @@
+query allHomes {
+    allHomes {
+        edges {
+            node {
+                body {
+                    __typename
+                    ... on HomeBodySection_intro {
+                        type
+                        label
+                        primary {
+                            featured_image
+                            title
+                            text
+                            button_text
+                        }
+                    }
+                    ... on HomeBodySection_cases {
+                        type
+                        label
+                        primary {
+                            title
+                            text
+                            button_text
+                            case1 {
+                                __typename
+                                ... on Cases {
+                                    title
+                                    description
+                                    featured_image
+                                    _meta {
+                                        id
+                                        uid
+                                    }
+                                }
+                            }
+                            case2 {
+                                __typename
+                                ... on Cases {
+                                    title
+                                    description
+                                    featured_image
+                                    _meta {
+                                        id
+                                        uid
+                                    }
+                                }
+                            }
+                            case3 {
+                                __typename
+                                ... on Cases {
+                                    title
+                                    description
+                                    featured_image
+                                    _meta {
+                                        id
+                                        uid
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ... on HomeBodySection_about {
+                        type
+                        label
+                        primary {
+                            title
+                            text
+                            video
+                            button_text
+                        }
+                    }
+                    ... on HomeBodySection_waiting {
+                        type
+                        label
+                        primary {
+                            featured_image
+                            title
+                            text
+                            button_text
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
