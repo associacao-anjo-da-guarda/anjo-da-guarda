@@ -8,7 +8,7 @@
                     width="100%"
                     height="50vh"
                     is-bg
-                    :src="about.image"
+                    :src="pagina.featured_image.url"
                 />
             </o-wrapper>
         </o-section>
@@ -23,22 +23,35 @@
             >
 
                 <o-section>
-                    <o-wrapper>
+                    <o-wrapper row-gap-normal>
 
                         <a-title
                             tag="h1"
                             level1
-                        >
-                            {{ about.title }}
-                        </a-title>
+                            left
+                            v-html="$prismic.asText(pagina.title)"
+                        />
+
+                        <a-text
+                            v-show="pagina.description"
+                            v-html="$prismic.asText(pagina.description)"
+                        />
 
                     </o-wrapper>
                 </o-section>
 
                 <o-section>
-                    <o-wrapper class="o-section-intro__body">
+                    <o-wrapper
+                        row-gap-normal
+                        class="o-section-intro__body"
+                    >
 
-                        <a-text v-html="$md.render(about.body)" />
+                        <component
+                            :is="getComponent(component.type)"
+                            v-for="(component, index) in pagina.body"
+                            :key="index"
+                            :component-data="component.primary"
+                        />
 
                     </o-wrapper>
                 </o-section>
@@ -65,13 +78,13 @@
                             {{ about.button2Text }}
                         </a-button> -->
 
-                        <a-button
+                        <!-- <a-button
                             secondary
                             large
                             to="/seja-nosso-heroi"
                         >
                             {{ about.buttonCtaText }}
-                        </a-button>
+                        </a-button> -->
 
                     </o-wrapper>
                 </o-section>
@@ -91,48 +104,47 @@
         </o-section>
 
     </main>
-
 </template>
 
 <script>
+import MPrismicTextBlock from '@/components/molecules/MPrismicTextBlock'
+import MPrismicImageBlock from '@/components/molecules/MPrismicImageBlock'
+import MPrismicEmbedBlock from '@/components/molecules/MPrismicEmbedBlock'
 
 export default {
 
-    computed: {
-        about () {
-            return this.$store.state.about
+    name: 'TpaginaSimples',
+
+    components: {
+        MPrismicTextBlock,
+        MPrismicImageBlock,
+        MPrismicEmbedBlock
+    },
+
+    props: {
+        pagina: {
+            type: Object,
+            required: true
         }
     },
 
-    head () {
-        return {
-            script: [
-                { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
-            ]
+    methods: {
+        getComponent (componentType) {
+            if (componentType === 'text') {
+                return 'MPrismicTextBlock'
+            } else if (componentType === 'image') {
+                return 'MPrismicImageBlock'
+            } else if (componentType === 'embed') {
+                return 'MPrismicEmbedBlock'
+            } else {
+                return 'div'
+            }
+            // return 'div'
         }
     }
 
 }
 </script>
 
-<style scoped>
-@media screen and (min-width: 1200px) {
-    .o-section-cases-body__wrapper {
-        grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
-        justify-content: center;
-        column-gap: calc(var(--space-grid) * 3);
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .section-illustration {
-        position: fixed;
-        bottom: 0;
-        z-index: -1000;
-    }
-}
-
-.o-section-intro__body {
-    max-width: 43.75rem;
-}
+<style>
 </style>
