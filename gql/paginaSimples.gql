@@ -1,0 +1,31 @@
+query pagina_simples ($uid: String!, $lang: String!) {
+  pagina_simples(uid: $uid, lang: $lang) {
+    title
+    description
+    featured_image
+    body {
+      __typename
+      ... on Pagina_simplesBodyText {
+        type
+        label
+        primary {
+          text
+        }
+      }
+      ... on Pagina_simplesBodyImage {
+        type
+        label
+        primary {
+          image
+        }
+      }
+      ... on Pagina_simplesBodyEmbed {
+        type
+        label
+        primary {
+          embed
+        }
+      }
+    }
+  }
+}
