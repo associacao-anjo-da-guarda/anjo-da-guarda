@@ -23,7 +23,7 @@ query allHomes {
                             button_text
                             case1 {
                                 __typename
-                                ... on Cases {
+                                ... on Case {
                                     title
                                     description
                                     featured_image
@@ -35,7 +35,7 @@ query allHomes {
                             }
                             case2 {
                                 __typename
-                                ... on Cases {
+                                ... on Case {
                                     title
                                     description
                                     featured_image
@@ -47,7 +47,7 @@ query allHomes {
                             }
                             case3 {
                                 __typename
-                                ... on Cases {
+                                ... on Case {
                                     title
                                     description
                                     featured_image
