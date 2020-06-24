@@ -39,19 +39,19 @@
                 <o-section>
 
                     <o-wrapper
-                        v-if="galleries"
+                        v-if="items[0]"
                         row-gap-normal
                         centered-content
                         class="o-section-intro-body__wrapper"
                     >
 
                         <m-card
-                            v-for="(gallery, index) in galleries"
+                            v-for="(item, index) in items"
                             :key="index"
-                            :image="gallery.image"
-                            :title="gallery.title"
-                            :text="gallery.description"
-                            :link="`${$route.path}/${gallery.slug}`"
+                            :image="item.node.featured_image.url"
+                            :title="$prismic.asText(item.node.title)"
+                            :text="$prismic.asText(item.node.description)"
+                            :link="`${$route.path}/${item.node._meta.uid}`"
                         />
 
                     </o-wrapper>
@@ -63,7 +63,7 @@
                     >
 
                         <a-text large>
-                            Ainda não existem eventos cadastrados
+                            Ainda não existem galerias cadastradas
                         </a-text>
                     </o-wrapper>
 
@@ -121,6 +121,8 @@
 </template>
 
 <script>
+import { apollo } from '@/prismicConfig'
+import allGaleriasQuery from '@/gql/allGalerias.gql'
 import MCard from '@/components/molecules/MCard'
 
 export default {
@@ -129,20 +131,20 @@ export default {
         MCard
     },
 
-    computed: {
-        galleries () {
-            return this.$store.state.galleries
-        }
-        // link() {
-        //     return
-        // }
-    },
+    async asyncData (context) {
+        try {
+            const { data: { allGalerias: { edges } } } = await apollo.query({
+                query: allGaleriasQuery,
+                fetchPolicy: 'no-cache'
+            })
 
-    head () {
-        return {
-            script: [
-                { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
-            ]
+            if (edges[0]) {
+                return {
+                    items: edges /** Array */
+                }
+            }
+        } catch (e) {
+            console.log('Erro ao consultar dados', e)
         }
     }
 

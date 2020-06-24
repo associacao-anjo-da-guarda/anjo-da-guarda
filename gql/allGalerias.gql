@@ -1,0 +1,49 @@
+query allGalerias{
+    allGalerias {
+        edges {
+            node {
+                title
+                description
+                featured_image
+                _meta {
+                    id
+                    uid
+                    firstPublicationDate
+                    lastPublicationDate
+                }
+                body {
+                    __typename
+                    ... on GaleriaBodyText {
+                        type
+                        label
+                        primary {
+                            text
+                        }
+                    }
+                    ... on GaleriaBodyImage {
+                        type
+                        label
+                        primary {
+                            image
+                        }
+                    }
+                    ... on GaleriaBodyEmbed {
+                        type
+                        label
+                        primary {
+                            embed
+                        }
+                    }
+                  ... on GaleriaBodyImage_gallery {
+                    type
+                    label
+                    fields {
+                      gallery_image
+                      image_description
+                    }
+                  }
+                }
+            }
+        }
+    }
+}
