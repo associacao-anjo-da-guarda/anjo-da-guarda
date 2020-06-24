@@ -32,7 +32,7 @@
                 <a-button
                     text
                     large
-                    to="/quem-somos/"
+                    to="/quem-somos"
                     class="m-menu__item"
                 >
                     Quem somos
