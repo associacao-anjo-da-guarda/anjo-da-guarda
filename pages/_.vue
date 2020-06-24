@@ -58,25 +58,3 @@ export default {
 
 }
 </script>
-
-<style scoped>
-@media screen and (min-width: 1200px) {
-    .o-section-cases-body__wrapper {
-        grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
-        justify-content: center;
-        column-gap: calc(var(--space-grid) * 3);
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .section-illustration {
-        position: fixed;
-        bottom: 0;
-        z-index: -1000;
-    }
-}
-
-.o-section-intro__body {
-    max-width: 43.75rem;
-}
-</style>
