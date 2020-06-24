@@ -1,0 +1,41 @@
+query allEventos{
+    allEventos {
+        edges {
+            node {
+                title
+                description
+                featured_image
+                _meta {
+                    id
+                    uid
+                    firstPublicationDate
+                    lastPublicationDate
+                }
+                body {
+                    __typename
+                    ... on EventoBodyText {
+                        type
+                        label
+                        primary {
+                            text
+                        }
+                    }
+                    ... on EventoBodyImage {
+                        type
+                        label
+                        primary {
+                            image
+                        }
+                    }
+                    ... on EventoBodyEmbed {
+                        type
+                        label
+                        primary {
+                            embed
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
