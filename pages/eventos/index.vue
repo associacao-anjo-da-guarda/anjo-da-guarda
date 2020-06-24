@@ -30,7 +30,7 @@
                             tag="h1"
                             level1
                         >
-                            Nossos Eventos
+                            Eventos
                         </a-title>
 
                     </o-wrapper>
@@ -39,19 +39,19 @@
                 <o-section>
 
                     <o-wrapper
-                        v-if="events"
+                        v-if="items[0]"
                         row-gap-normal
                         centered-content
                         class="o-section-intro-body__wrapper"
                     >
 
                         <m-card
-                            v-for="(event, index) in events"
+                            v-for="(item, index) in items"
                             :key="index"
-                            :image="event.image"
-                            :title="event.title"
-                            :text="event.description"
-                            :link="`${$route.path}/${event.slug}`"
+                            :image="item.node.featured_image.url"
+                            :title="$prismic.asText(item.node.title)"
+                            :text="$prismic.asText(item.node.description)"
+                            :link="`${$route.path}/${item.node._meta.uid}`"
                         />
 
                     </o-wrapper>
@@ -121,6 +121,8 @@
 </template>
 
 <script>
+import { apollo } from '@/prismicConfig'
+import allEventosQuery from '@/gql/allEventos.gql'
 import MCard from '@/components/molecules/MCard'
 
 export default {
@@ -129,20 +131,20 @@ export default {
         MCard
     },
 
-    computed: {
-        events () {
-            return this.$store.state.events
-        }
-        // link() {
-        //     return
-        // }
-    },
+    async asyncData (context) {
+        try {
+            const { data: { allEventos: { edges } } } = await apollo.query({
+                query: allEventosQuery,
+                fetchPolicy: 'no-cache'
+            })
 
-    head () {
-        return {
-            script: [
-                { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
-            ]
+            if (edges[0]) {
+                return {
+                    items: edges /** Array */
+                }
+            }
+        } catch (e) {
+            console.log('Erro ao consultar dados', e)
         }
     }
 
