@@ -1,0 +1,45 @@
+query galeria($uid: String!, $lang: String!) {
+  galeria(uid: $uid, lang: $lang){
+    title
+    description
+    featured_image
+    body {
+        __typename
+        ... on GaleriaBodyText {
+            type
+            label
+            primary {
+                text
+            }
+        }
+        ... on GaleriaBodyImage {
+            type
+            label
+            primary {
+                image
+            }
+        }
+        ... on GaleriaBodyEmbed {
+            type
+            label
+            primary {
+                embed
+            }
+        }
+        ... on GaleriaBodyImage_gallery {
+                type
+                label
+                fields {
+                    gallery_image
+                    image_description
+            }
+        }
+    }
+    _meta{
+      uid
+      firstPublicationDate
+      lastPublicationDate
+    }
+    
+  }
+}
