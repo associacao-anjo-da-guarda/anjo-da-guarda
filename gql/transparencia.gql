@@ -1,0 +1,64 @@
+query transparencia($uid: String!, $lang: String!) {
+    transparencia(uid: $uid, lang: $lang) {
+        title
+        description
+        featured_image
+        interval
+        _meta {
+            id
+            uid
+            firstPublicationDate
+            lastPublicationDate
+        }
+        body {
+            __typename
+                ...on TransparenciaBodyText {
+                    type
+                    label
+                    primary {
+                        text
+                    }
+                }
+                ...on TransparenciaBodyImage {
+                    type
+                    label
+                    primary {
+                        image
+                    }
+                }
+                ...on TransparenciaBodyEmbed {
+                    type
+                    label
+                    primary {
+                        embed
+                    }
+                }
+                ...on TransparenciaBodyReport_section {
+                    type
+                    label
+                    primary {
+                        report_section_title
+                        report_section_title_link {
+                            __typename
+                                ...on _FileLink {
+                                    name
+                                    url
+                                }
+                        }
+                        report_section_text
+                    }
+                    fields {
+                        report_section_item
+                        report_section_item_link {
+                            __typename
+                                ...on _FileLink {
+                                    name
+                                    url
+                                }
+                        }
+                    }
+                }
+        }
+
+    }
+}
