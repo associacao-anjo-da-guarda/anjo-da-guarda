@@ -4,7 +4,11 @@ export default {
 
     mode: 'universal',
 
-    // target: 'static',
+    target: 'static',
+
+    // router: {
+    //     trailingSlash: true
+    // },
 
     /*
    ** Headers of the page
@@ -136,10 +140,10 @@ export default {
     buildModules: [
         ['@nuxtjs/google-analytics', {
             id: 'UA-26818222-5'
-        }],
+        }]
         // modules for full static before `nuxt export` (coming in v2.12)
-        '@/modules/static',
-        '@/modules/crawler'
+        // '@/modules/static',
+        // '@/modules/crawler'
     ],
     /*
    ** Nuxt.js modules
