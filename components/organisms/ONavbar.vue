@@ -189,7 +189,7 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     z-index: 10000;
     box-shadow: 0 1px 0 0 rgba(33, 54, 56, 0.08);
 }
