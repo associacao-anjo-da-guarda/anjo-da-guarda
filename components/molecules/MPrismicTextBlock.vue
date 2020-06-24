@@ -4,7 +4,7 @@
         <o-wrapper
             class="m-prismic-text-block__wrapper"
             row-gap-normal
-            v-html="$prismic.asHtml(componentData.text)"
+            v-html="$prismic.asHtml(componentData.primary.text)"
         />
     </o-section>
 

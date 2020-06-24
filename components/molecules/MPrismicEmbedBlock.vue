@@ -2,7 +2,7 @@
 
     <div
         class="m-prismic-embed-block"
-        v-html="componentData.embed.html"
+        v-html="componentData.primary.embed.html"
     />
 
 </template>
