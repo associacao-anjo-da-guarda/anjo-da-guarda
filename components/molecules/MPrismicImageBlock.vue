@@ -2,8 +2,8 @@
 
     <a-image
         class="m-prismic-image-block"
-        :src="componentData.image.url"
-        :alt="componentData.image.alt"
+        :src="componentData.primary.image.url"
+        :alt="componentData.primary.image.alt"
     />
 
 </template>
