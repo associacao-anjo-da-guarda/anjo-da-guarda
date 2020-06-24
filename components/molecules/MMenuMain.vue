@@ -43,7 +43,7 @@
                 <a-button
                     text
                     large
-                    to="/"
+                    to="/transparencia"
                     class="m-menu__item"
                 >
                     Transparência
@@ -68,7 +68,7 @@
                     to="/galerias"
                     class="m-menu__item"
                 >
-                    Galeria
+                    Galerias
                 </a-button>
             </li>
 
