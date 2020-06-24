@@ -1,0 +1,37 @@
+query case($uid: String!, $lang: String!) {
+  case(uid: $uid, lang: $lang){
+    title
+    description
+    featured_image
+    body {
+        __typename
+        ... on CaseBodyText {
+            type
+            label
+            primary {
+                text
+            }
+        }
+        ... on CaseBodyImage {
+            type
+            label
+            primary {
+                image
+            }
+        }
+        ... on CaseBodyEmbed {
+            type
+            label
+            primary {
+                embed
+            }
+        }
+    }
+    _meta{
+      uid
+      firstPublicationDate
+      lastPublicationDate
+    }
+    
+  }
+}

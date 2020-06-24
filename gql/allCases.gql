@@ -1,0 +1,41 @@
+query allCases{
+    allCases {
+        edges {
+            node {
+                title
+                description
+                featured_image
+                _meta {
+                    id
+                    uid
+                    firstPublicationDate
+                    lastPublicationDate
+                }
+                body {
+                    __typename
+                    ... on CaseBodyText {
+                        type
+                        label
+                        primary {
+                            text
+                        }
+                    }
+                    ... on CaseBodyImage {
+                        type
+                        label
+                        primary {
+                            image
+                        }
+                    }
+                    ... on CaseBodyEmbed {
+                        type
+                        label
+                        primary {
+                            embed
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
