@@ -2,28 +2,31 @@
 
     <main class="o-main">
 
-        <o-section>
+        <o-section v-if="pagina.featured_image">
             <o-wrapper>
+
                 <a-image
                     width="100%"
                     height="50vh"
                     is-bg
                     :src="pagina.featured_image.url"
                 />
+
             </o-wrapper>
         </o-section>
 
         <o-section class="o-section-intro">
             <o-wrapper
-                padding-section
                 centered-content
                 row-gap-large
-                boxed
                 class="o-section-intro__wrapper"
             >
 
-                <o-section>
-                    <o-wrapper row-gap-normal>
+                <o-section class="o-section-intro__header">
+                    <o-wrapper
+                        row-gap-normal
+                        class="o-section-intro-header__wrapper"
+                    >
 
                         <a-title
                             tag="h1"
@@ -34,32 +37,46 @@
 
                         <a-text
                             v-show="pagina.description"
+                            left
                             v-html="$prismic.asText(pagina.description)"
                         />
 
                     </o-wrapper>
                 </o-section>
 
-                <o-section>
+                <o-section class="o-section-intro__body">
                     <o-wrapper
                         row-gap-normal
-                        class="o-section-intro__body"
+                        class="o-section-intro-body__wrapper"
                     >
 
                         <component
                             :is="getComponent(component.type)"
                             v-for="(component, index) in pagina.body"
                             :key="index"
-                            :component-data="component.primary"
+                            :component-data="{ primary: component.primary, fields: component.fields }"
                         />
 
                     </o-wrapper>
+
+                    <!-- <o-section v-if="mediaGallery"> -->
+                    <o-wrapper
+                        v-if="mediaGallery"
+                        class="o-section-intro-body__gallery-wrapper"
+                    >
+
+                        <m-prismic-media-gallery-block :component-data="{primary: mediaGallery.primary, fields: mediaGallery.fields}" />
+
+                    </o-wrapper>
+                    <!-- </o-section> -->
+
                 </o-section>
 
-                <o-section>
+                <o-section class="o-section-intro__footer">
                     <o-wrapper
                         centered-content
                         row-gap-normal
+                        class="o-section-intro-footer__wrapper"
                     >
 
                         <!-- <a-button
@@ -92,7 +109,7 @@
             </o-wrapper>
         </o-section>
 
-        <o-section class="section-illustration">
+        <!-- <o-section class="section-illustration">
             <o-wrapper>
                 <a-image
                     width="383px"
@@ -101,30 +118,39 @@
                     src="menina-cacheada.svg"
                 />
             </o-wrapper>
-        </o-section>
+        </o-section> -->
 
     </main>
 </template>
 
 <script>
-import MPrismicTextBlock from '@/components/molecules/MPrismicTextBlock'
-import MPrismicImageBlock from '@/components/molecules/MPrismicImageBlock'
-import MPrismicEmbedBlock from '@/components/molecules/MPrismicEmbedBlock'
 
 export default {
 
-    name: 'TpaginaSimples',
+    name: 'TPaginaSimples',
 
     components: {
-        MPrismicTextBlock,
-        MPrismicImageBlock,
-        MPrismicEmbedBlock
+        MPrismicTextBlock: () => import('@/components/molecules/MPrismicTextBlock'),
+        MPrismicImageBlock: () => import('@/components/molecules/MPrismicImageBlock'),
+        MPrismicEmbedBlock: () => import('@/components/molecules/MPrismicEmbedBlock'),
+        MPrismicMediaGalleryBlock: () => import('@/components/molecules/MPrismicMediaGalleryBlock')
     },
 
     props: {
         pagina: {
             type: Object,
             required: true
+        }
+    },
+
+    computed: {
+        mediaGallery () {
+            if (!this.pagina.body) {
+                return
+            }
+            return this.pagina.body.filter((component) => {
+                return component.type === 'image_gallery'
+            })[0]
         }
     },
 
@@ -136,15 +162,34 @@ export default {
                 return 'MPrismicImageBlock'
             } else if (componentType === 'embed') {
                 return 'MPrismicEmbedBlock'
+            } else if (componentType === 'image_gallery') {
+                return null
             } else {
                 return 'div'
             }
-            // return 'div'
         }
     }
 
 }
 </script>
 
-<style>
+<style scoped>
+@media screen and (min-width: 1200px) {
+    .section-illustration {
+        position: fixed;
+        bottom: 0;
+        z-index: -1000;
+    }
+}
+
+.o-section-intro-header__wrapper {
+    max-width: calc((var(--padding-section) * 2) + 43.75rem);
+    padding: var(--padding-section);
+    padding-bottom: 0;
+}
+
+.o-section-intro-body__wrapper {
+    max-width: calc((var(--padding-section) * 2) + 43.75rem);
+    padding: 0 var(--padding-section);
+}
 </style>
