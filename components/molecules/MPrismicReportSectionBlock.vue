@@ -39,7 +39,7 @@
                             class="a-section-item"
                         >
                             <a
-                                :href="field.report_section_item_link ? field.report_section_item_link.url : '#'"
+                                :href="field.report_section_item_link ? field.report_section_item_link.url : ''"
                                 target="_blank"
                                 rel="nooppener nofolow"
                             >
@@ -48,7 +48,7 @@
                                     alt="Baixar PDF"
                                 >
                             </a>
-                            {{ $prismic.asText(field.report_section_item) }}
+                            {{ $prismic.asText(field.report_section_item) || field.report_section_item_link.name }}
                         </a-text>
 
                     </div>
