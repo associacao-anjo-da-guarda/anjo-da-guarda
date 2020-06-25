@@ -32,6 +32,17 @@
                 <a-button
                     text
                     large
+                    to="/eventos/categoria/quarentena"
+                    class="m-menu__item"
+                >
+                    Nós na quarentena
+                </a-button>
+            </li>
+
+            <li @click="$emit('close-menu')">
+                <a-button
+                    text
+                    large
                     to="/quem-somos"
                     class="m-menu__item"
                 >
