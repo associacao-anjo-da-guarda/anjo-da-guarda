@@ -17,6 +17,7 @@
             <a-text v-html="$prismic.asHtml(sectionData.text)" />
 
             <div
+                v-if="sectionData.video"
                 class="a-embed"
                 v-html="sectionData.video.html"
             />
