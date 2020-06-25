@@ -11,13 +11,13 @@
             <section class="o-navbar__logo">
                 <img
                     class="o-navbar__logo-image o-navbar__logo-image--small"
-                    src="@/assets/logo-small.png"
+                    src="@/assets/logo-small.svg"
                     alt="Associação Anjo da Guarda"
                     @click="goToHome"
                 >
                 <img
                     class="o-navbar__logo-image o-navbar__logo-image--large"
-                    src="@/assets/logo-large.png"
+                    src="@/assets/logo-large.svg"
                     alt="Associação Anjo da Guarda"
                     @click="goToHome"
                 >
