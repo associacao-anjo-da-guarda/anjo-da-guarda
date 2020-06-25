@@ -46,6 +46,6 @@ export default {
 
 <style scoped>
 .o-section-about {
-    background-color: var(--color-secondary);
+    background-color: #f3f9d2;
 }
 </style>

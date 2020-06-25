@@ -5,13 +5,13 @@
     * - Change the base colors settings to your brand colors
     * - You need to change only the --settings HSL values below
     */
-    --settings-color-primary: 346, 85%, 45%;
-    --settings-color-primary-light: 346, 69%, 70%;
-    --settings-color-primary-dark: 346, 86%, 25%;
+    --settings-color-primary: 340, 100%, 46%;
+    --settings-color-primary-light: 347, 100%, 67%;
+    --settings-color-primary-dark: 347, 100%, 35%;
 
-    --settings-color-secondary: 48, 100%, 50%;
-    --settings-color-secondary-light: 48, 100%, 73%;
-    --settings-color-secondary-dark: 48, 100%, 27%;
+    --settings-color-secondary: 57, 100%, 46%;
+    --settings-color-secondary-light: 60, 100%, 66%;
+    --settings-color-secondary-dark: 59, 100%, 35%;
 
     --settings-color-bg: 0, 0%, 100%;
     --settings-color-surface: 0, 0%, 100%;

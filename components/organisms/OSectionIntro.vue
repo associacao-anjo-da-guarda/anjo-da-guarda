@@ -52,9 +52,9 @@ export default {
 .o-section-intro {
     color: var(--color-on-primary-hi);
     background: radial-gradient(
-            73.14% 73.14% at 50% 26.86%,
-            rgba(212, 17, 63, 0) 0%,
-            #d4113f 61.46%
+            100% 100% at 50% 0%,
+            rgba(237, 0, 79, 0) 0%,
+            #ed004f 72.4%
         ),
         url("~assets/girl-holding-dandelion-flower.jpg") no-repeat center;
     background-size: cover;
