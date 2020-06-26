@@ -76,7 +76,7 @@ export default {
     font-weight: var(--font-weight-title);
     line-height: var(--line-height-title);
     text-transform: uppercase;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
 }
 
 .a-title--level-1 {
