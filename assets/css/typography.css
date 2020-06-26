@@ -1,62 +1,62 @@
-/* https://google-webfonts-helper.herokuapp.com/fonts/ubuntu?subsets=latin */
+/* https://google-webfonts-helper.herokuapp.com/fonts/dosis?subsets=latin */
 
-/* ubuntu-regular - latin */
+/* dosis-regular - latin */
 @font-face {
-    font-family: 'Ubuntu';
+    font-family: 'Dosis';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/ubuntu-v14-latin-regular.eot');
+    src: url('./fonts/dosis-v17-latin-regular.eot');
     /* IE9 Compat Modes */
-    src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
-        url('./fonts/ubuntu-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+    src: local(''),
+        url('./fonts/dosis-v17-latin-regular.eot?#iefix') format('embedded-opentype'),
         /* IE6-IE8 */
-        url('./fonts/ubuntu-v14-latin-regular.woff2') format('woff2'),
+        url('./fonts/dosis-v17-latin-regular.woff2') format('woff2'),
         /* Super Modern Browsers */
-        url('./fonts/ubuntu-v14-latin-regular.woff') format('woff'),
+        url('./fonts/dosis-v17-latin-regular.woff') format('woff'),
         /* Modern Browsers */
-        url('./fonts/ubuntu-v14-latin-regular.ttf') format('truetype'),
+        url('./fonts/dosis-v17-latin-regular.ttf') format('truetype'),
         /* Safari, Android, iOS */
-        url('./fonts/ubuntu-v14-latin-regular.svg#Ubuntu') format('svg');
+        url('./fonts/dosis-v17-latin-regular.svg#Dosis') format('svg');
     /* Legacy iOS */
 }
 
-/* ubuntu-500 - latin */
+/* dosis-500 - latin */
 @font-face {
-    font-family: 'Ubuntu';
+    font-family: 'Dosis';
     font-style: normal;
     font-weight: 500;
-    src: url('./fonts/ubuntu-v14-latin-500.eot');
+    src: url('./fonts/dosis-v17-latin-500.eot');
     /* IE9 Compat Modes */
-    src: local('Ubuntu Medium'), local('Ubuntu-Medium'),
-        url('./fonts/ubuntu-v14-latin-500.eot?#iefix') format('embedded-opentype'),
+    src: local(''),
+        url('./fonts/dosis-v17-latin-500.eot?#iefix') format('embedded-opentype'),
         /* IE6-IE8 */
-        url('./fonts/ubuntu-v14-latin-500.woff2') format('woff2'),
+        url('./fonts/dosis-v17-latin-500.woff2') format('woff2'),
         /* Super Modern Browsers */
-        url('./fonts/ubuntu-v14-latin-500.woff') format('woff'),
+        url('./fonts/dosis-v17-latin-500.woff') format('woff'),
         /* Modern Browsers */
-        url('./fonts/ubuntu-v14-latin-500.ttf') format('truetype'),
+        url('./fonts/dosis-v17-latin-500.ttf') format('truetype'),
         /* Safari, Android, iOS */
-        url('./fonts/ubuntu-v14-latin-500.svg#Ubuntu') format('svg');
+        url('./fonts/dosis-v17-latin-500.svg#Dosis') format('svg');
     /* Legacy iOS */
 }
 
-/* ubuntu-700 - latin */
+/* dosis-700 - latin */
 @font-face {
-    font-family: 'Ubuntu';
+    font-family: 'Dosis';
     font-style: normal;
     font-weight: 700;
-    src: url('./fonts/ubuntu-v14-latin-700.eot');
+    src: url('./fonts/dosis-v17-latin-700.eot');
     /* IE9 Compat Modes */
-    src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
-        url('./fonts/ubuntu-v14-latin-700.eot?#iefix') format('embedded-opentype'),
+    src: local(''),
+        url('./fonts/dosis-v17-latin-700.eot?#iefix') format('embedded-opentype'),
         /* IE6-IE8 */
-        url('./fonts/ubuntu-v14-latin-700.woff2') format('woff2'),
+        url('./fonts/dosis-v17-latin-700.woff2') format('woff2'),
         /* Super Modern Browsers */
-        url('./fonts/ubuntu-v14-latin-700.woff') format('woff'),
+        url('./fonts/dosis-v17-latin-700.woff') format('woff'),
         /* Modern Browsers */
-        url('./fonts/ubuntu-v14-latin-700.ttf') format('truetype'),
+        url('./fonts/dosis-v17-latin-700.ttf') format('truetype'),
         /* Safari, Android, iOS */
-        url('./fonts/ubuntu-v14-latin-700.svg#Ubuntu') format('svg');
+        url('./fonts/dosis-v17-latin-700.svg#Dosis') format('svg');
     /* Legacy iOS */
 }
 
@@ -68,10 +68,10 @@
     * - Change the root size if you want
     * to increase all the text sizes
     */
-    font-size: 16px;
+    font-size: 18px;
 
     /* Default font settings */
-    --font-family: 'Ubuntu', sans-serif;
+    --font-family: 'Dosis', sans-serif;
     --font-weight: 400;
     /* regular */
     --font-size: 1rem;
@@ -86,7 +86,7 @@
     --font-size-increment-button: 0rem;
 
     /* Default headings font settings */
-    --font-family-title: 'Ubuntu', sans-serif;
+    --font-family-title: 'Dosis', sans-serif;
     --font-weight-title: 700;
     --line-height-title: 1.2;
 
