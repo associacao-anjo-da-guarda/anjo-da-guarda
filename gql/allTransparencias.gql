@@ -11,6 +11,7 @@ query allTransparencias {
                     uid
                     firstPublicationDate
                     lastPublicationDate
+                    type
                 }
                 body {
                     __typename

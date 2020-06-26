@@ -10,6 +10,7 @@ query allCases{
                     uid
                     firstPublicationDate
                     lastPublicationDate
+                    type
                 }
                 body {
                     __typename

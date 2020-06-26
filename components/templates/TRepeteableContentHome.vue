@@ -2,22 +2,9 @@
 
     <main class="o-main">
 
-        <o-section class="section-featured-image">
-            <o-wrapper>
-                <!-- <a-image
-                    width="100%"
-                    height="50vh"
-                    is-bg
-                    src="image-crianca-superman-lg.jpg"
-                    class="section-featured-image__image"
-                /> -->
-            </o-wrapper>
-        </o-section>
+        <o-section-featured-image gradiente />
 
-        <o-section
-            v-if="items[0]"
-            class="o-section-intro"
-        >
+        <o-section class="o-section-intro">
             <o-wrapper
                 padding-section
                 centered-content
@@ -33,7 +20,7 @@
                             tag="h1"
                             level1
                         >
-                            Eventos{{ items[0].node.category.category_name ? ` / ${items[0].node.category.category_name}` : '' }}
+                            {{ pagina.title }}
                         </a-title>
 
                     </o-wrapper>
@@ -42,16 +29,17 @@
                 <o-section>
 
                     <o-wrapper
-                        v-if="items[0]"
+                        v-if="pagina.items[0]"
                         row-gap-normal
                         centered-content
                         class="o-section-intro-body__wrapper"
                     >
 
                         <m-card
-                            v-for="(item, index) in items"
+                            v-for="(item, index) in pagina.items"
                             :key="index"
                             :card-data="cardData(item)"
+                            :transparency-card="item.node._meta.type === 'transparencia'"
                         />
 
                     </o-wrapper>
@@ -63,7 +51,7 @@
                     >
 
                         <a-text large>
-                            Ainda não existem eventos cadastrados
+                            Oops, não existe nada aqui!
                         </a-text>
                     </o-wrapper>
 
@@ -121,46 +109,18 @@
 </template>
 
 <script>
-import { apollo } from '@/prismicConfig'
-import allEventosQuery from '@/gql/allEventos.gql'
-import eventCategoryQuery from '@/gql/eventCategory.gql'
-import MCard from '@/components/molecules/MCard'
 
 export default {
 
     components: {
-        MCard
+        MCard: () => import('@/components/molecules/MCard'),
+        OSectionFeaturedImage: () => import('@/components/organisms/OSectionFeaturedImage')
     },
 
-    async asyncData ({ params, redirect }) {
-        try {
-            const uid = params.slug
-
-            const { data: { event_category: { _meta: { id } } } } = await apollo.query({
-                query: eventCategoryQuery,
-                variables: {
-                    uid,
-                    lang: 'pt-br'
-                },
-                fetchPolicy: 'no-cache'
-            })
-
-            const { data: { allEventos: { edges } } } = await apollo.query({
-                query: allEventosQuery,
-                variables: {
-                    categoryId: id
-                },
-                fetchPolicy: 'no-cache'
-            })
-
-            if (edges[0]) {
-                return {
-                    items: edges /** Array */
-                }
-            }
-        } catch (e) {
-            console.log('Erro ao consultar dados', e)
-            return redirect('/eventos')
+    props: {
+        pagina: {
+            type: Object,
+            required: true
         }
     },
 
@@ -171,12 +131,29 @@ export default {
                 image: item.node.featured_image,
                 title: this.$prismic.asText(item.node.title),
                 text: this.$prismic.asText(item.node.description),
-                link: `/eventos/${item.node._meta.uid}`,
+                link: `${this.$route.path}/${item.node._meta.uid}`,
                 interval: this.$prismic.asText(item.node.interval)
             }
         }
 
     }
+
+    // async asyncData (context) {
+    //     try {
+    //         const { data: { allCases: { edges } } } = await apollo.query({
+    //             query: allCasesQuery,
+    //             fetchPolicy: 'no-cache'
+    //         })
+
+    //         if (edges[0]) {
+    //             return {
+    //                 pagina.items: edges /** Array */
+    //             }
+    //         }
+    //     } catch (e) {
+    //         console.log('Erro ao consultar dados', e)
+    //     }
+    // }
 
 }
 </script>

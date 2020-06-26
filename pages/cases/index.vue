@@ -2,119 +2,10 @@
 
     <main class="o-main">
 
-        <o-section class="section-featured-image">
-            <o-wrapper>
-                <!-- <a-image
-                    width="100%"
-                    height="50vh"
-                    is-bg
-                    src="image-crianca-superman-lg.jpg"
-                    class="section-featured-image__image"
-                /> -->
-            </o-wrapper>
-        </o-section>
-
-        <o-section class="o-section-intro">
-            <o-wrapper
-                padding-section
-                centered-content
-                row-gap-large
-                boxed
-                class="o-section-intro__wrapper"
-            >
-
-                <o-section>
-                    <o-wrapper>
-
-                        <a-title
-                            tag="h1"
-                            level1
-                        >
-                            Cases
-                        </a-title>
-
-                    </o-wrapper>
-                </o-section>
-
-                <o-section>
-
-                    <o-wrapper
-                        v-if="items[0]"
-                        row-gap-normal
-                        centered-content
-                        class="o-section-intro-body__wrapper"
-                    >
-
-                        <m-card
-                            v-for="(item, index) in items"
-                            :key="index"
-                            :image="item.node.featured_image"
-                            :title="$prismic.asText(item.node.title)"
-                            :text="$prismic.asText(item.node.description)"
-                            :link="`${$route.path}/${item.node._meta.uid}`"
-                        />
-
-                    </o-wrapper>
-
-                    <o-wrapper
-                        v-else
-                        row-gap-normal
-                        centered-content
-                    >
-
-                        <a-text large>
-                            Ainda não existem cases cadastrados
-                        </a-text>
-                    </o-wrapper>
-
-                </o-section>
-
-                <o-section>
-                    <o-wrapper
-                        centered-content
-                        row-gap-normal
-                    >
-
-                        <!-- <a-button
-                            outlined
-                            large
-                            to="/transparencia"
-                        >
-                            {{ about.button1Text }}
-                        </a-button>
-
-                        <a-button
-                            outlined
-                            large
-                            to="/contato"
-                        >
-                            {{ about.button2Text }}
-                        </a-button> -->
-
-                        <!-- <a-button
-                            secondary
-                            large
-                            to="/seja-nosso-heroi"
-                        >
-                            {{ about.buttonCtaText }}
-                        </a-button> -->
-
-                    </o-wrapper>
-                </o-section>
-
-            </o-wrapper>
-        </o-section>
-
-        <o-section class="section-illustration">
-            <o-wrapper>
-                <a-image
-                    width="383px"
-                    height="auto"
-                    margin="0"
-                    src="menina-cacheada.svg"
-                />
-            </o-wrapper>
-        </o-section>
+        <component
+            :is="getComponent"
+            :pagina="pagina"
+        />
 
     </main>
 
@@ -122,64 +13,39 @@
 
 <script>
 import { apollo } from '@/prismicConfig'
-import allCasesQuery from '@/gql/allCases.gql'
-import MCard from '@/components/molecules/MCard'
+import query from '@/gql/allCases.gql'
 
 export default {
 
     components: {
-        MCard
+        TRepeteableContentHome: () => import('@/components/templates/TRepeteableContentHome')
     },
 
     async asyncData (context) {
         try {
             const { data: { allCases: { edges } } } = await apollo.query({
-                query: allCasesQuery,
+                query,
                 fetchPolicy: 'no-cache'
             })
 
             if (edges[0]) {
                 return {
-                    items: edges /** Array */
+                    pagina: {
+                        title: 'Cases',
+                        items: edges /** Array */
+                    }
                 }
             }
         } catch (e) {
             console.log('Erro ao consultar dados', e)
         }
+    },
+
+    computed: {
+        getComponent () {
+            return 'TRepeteableContentHome'
+        }
     }
 
 }
 </script>
-
-<style scoped>
-.o-section-intro-body__wrapper {
-    max-width: 43.75rem;
-}
-@media screen and (min-width: 1200px) {
-    .o-section-intro-body__wrapper {
-        grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
-        justify-content: center;
-        column-gap: calc(var(--space-grid) * 3);
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .section-illustration {
-        position: fixed;
-        bottom: 0;
-        z-index: -1000;
-    }
-}
-
-.section-featured-image {
-    width: 100%;
-    height: 50vh;
-    background: radial-gradient(
-            100% 316.05% at 100% 0%,
-            rgba(240, 119, 171, 0.91) 0%,
-            rgba(255, 206, 0, 0.25) 100%
-        ),
-        url("~assets/image-crianca-superman-lg.jpg") no-repeat center, #d4113f;
-    background-size: cover;
-}
-</style>

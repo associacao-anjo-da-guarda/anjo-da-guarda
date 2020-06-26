@@ -18,6 +18,7 @@ query allEventos($categoryId: String){
                     uid
                     firstPublicationDate
                     lastPublicationDate
+                    type
                 }
                 body {
                     __typename

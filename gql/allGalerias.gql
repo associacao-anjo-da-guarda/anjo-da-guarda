@@ -10,6 +10,7 @@ query allGalerias{
                     uid
                     firstPublicationDate
                     lastPublicationDate
+                    type
                 }
                 body {
                     __typename
