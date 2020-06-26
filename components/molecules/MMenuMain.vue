@@ -32,10 +32,10 @@
                 <a-button
                     text
                     large
-                    to="/eventos/categoria/quarentena"
+                    to="/eventos/categoria/covid-19"
                     class="m-menu__item"
                 >
-                    Nós na quarentena
+                    Covid-19
                 </a-button>
             </li>
 

@@ -48,7 +48,7 @@
                         <m-card
                             v-for="(item, index) in items"
                             :key="index"
-                            :image="item.node.featured_image.url"
+                            :image="item.node.featured_image"
                             :title="$prismic.asText(item.node.title)"
                             :text="$prismic.asText(item.node.description)"
                             :link="`${$route.path}/${item.node._meta.uid}`"

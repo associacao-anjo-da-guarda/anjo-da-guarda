@@ -55,8 +55,8 @@ export default {
 
     props: {
         image: {
-            type: String,
-            default: ''
+            type: Object,
+            default: () => { }
         },
         title: {
             type: String,
