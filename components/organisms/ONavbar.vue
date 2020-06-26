@@ -11,13 +11,13 @@
             <section class="o-navbar__logo">
                 <img
                     class="o-navbar__logo-image o-navbar__logo-image--small"
-                    src="@/assets/logo-small.png"
+                    src="@/assets/logo-small.svg"
                     alt="Associação Anjo da Guarda"
                     @click="goToHome"
                 >
                 <img
                     class="o-navbar__logo-image o-navbar__logo-image--large"
-                    src="@/assets/logo-large.png"
+                    src="@/assets/logo-large.svg"
                     alt="Associação Anjo da Guarda"
                     @click="goToHome"
                 >
@@ -28,13 +28,21 @@
                 v-if="1"
                 class="o-navbar__cta"
             >
-                <a-button
+                <!-- <a-button
                     outlined
                     fit-content
                     large
                     to="/seja-nosso-heroi"
                 >
                     Quero ser herói
+                </a-button> -->
+                <a-button
+                    outlined
+                    fit-content
+                    large
+                    to="/eventos/categoria/covid-19"
+                >
+                    Ações Covid-19
                 </a-button>
             </section>
 

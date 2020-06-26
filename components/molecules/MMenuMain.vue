@@ -32,6 +32,17 @@
                 <a-button
                     text
                     large
+                    to="/eventos/categoria/covid-19"
+                    class="m-menu__item"
+                >
+                    Ações Covid-19
+                </a-button>
+            </li>
+
+            <li @click="$emit('close-menu')">
+                <a-button
+                    text
+                    large
                     to="/quem-somos"
                     class="m-menu__item"
                 >

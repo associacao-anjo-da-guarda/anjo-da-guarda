@@ -1,0 +1,7 @@
+query eventCategory($uid: String!, $lang: String!) {
+    event_category(uid: $uid, lang: $lang) {
+        _meta {
+            id
+        }
+    }
+}

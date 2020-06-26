@@ -11,7 +11,7 @@
             <n-link :to="link">
                 <a-image
                     is-bg
-                    :src="image"
+                    :src="image.url"
                     width="100%"
                     height="12.5rem"
                     class="a-card__image"
@@ -47,8 +47,8 @@ export default {
 
     props: {
         image: {
-            type: String,
-            default: ''
+            type: Object,
+            default: () => { }
         },
         title: {
             type: String,

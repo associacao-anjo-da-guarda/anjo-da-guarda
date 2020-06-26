@@ -1,10 +1,18 @@
-query allEventos{
-    allEventos {
+query allEventos($categoryId: String){
+    allEventos(where: {category: $categoryId}) {
         edges {
             node {
                 title
                 description
                 featured_image
+                category {
+                    ... on Event_category {
+                        category_name
+                        _meta {
+                            uid
+                        }
+                    }
+                }
                 _meta {
                     id
                     uid

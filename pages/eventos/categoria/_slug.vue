@@ -14,7 +14,10 @@
             </o-wrapper>
         </o-section>
 
-        <o-section class="o-section-intro">
+        <o-section
+            v-if="items[0]"
+            class="o-section-intro"
+        >
             <o-wrapper
                 padding-section
                 centered-content
@@ -30,7 +33,7 @@
                             tag="h1"
                             level1
                         >
-                            Cases
+                            Eventos{{ items[0].node.category.category_name ? ` / ${items[0].node.category.category_name}` : '' }}
                         </a-title>
 
                     </o-wrapper>
@@ -51,7 +54,7 @@
                             :image="item.node.featured_image"
                             :title="$prismic.asText(item.node.title)"
                             :text="$prismic.asText(item.node.description)"
-                            :link="`${$route.path}/${item.node._meta.uid}`"
+                            :link="`/eventos/${item.node._meta.uid}`"
                         />
 
                     </o-wrapper>
@@ -63,7 +66,7 @@
                     >
 
                         <a-text large>
-                            Ainda não existem cases cadastrados
+                            Ainda não existem eventos cadastrados
                         </a-text>
                     </o-wrapper>
 
@@ -122,7 +125,8 @@
 
 <script>
 import { apollo } from '@/prismicConfig'
-import allCasesQuery from '@/gql/allCases.gql'
+import allEventosQuery from '@/gql/allEventos.gql'
+import eventCategoryQuery from '@/gql/eventCategory.gql'
 import MCard from '@/components/molecules/MCard'
 
 export default {
@@ -131,10 +135,24 @@ export default {
         MCard
     },
 
-    async asyncData (context) {
+    async asyncData ({ params, redirect }) {
         try {
-            const { data: { allCases: { edges } } } = await apollo.query({
-                query: allCasesQuery,
+            const uid = params.slug
+
+            const { data: { event_category: { _meta: { id } } } } = await apollo.query({
+                query: eventCategoryQuery,
+                variables: {
+                    uid,
+                    lang: 'pt-br'
+                },
+                fetchPolicy: 'no-cache'
+            })
+
+            const { data: { allEventos: { edges } } } = await apollo.query({
+                query: allEventosQuery,
+                variables: {
+                    categoryId: id
+                },
                 fetchPolicy: 'no-cache'
             })
 
@@ -145,6 +163,7 @@ export default {
             }
         } catch (e) {
             console.log('Erro ao consultar dados', e)
+            return redirect('/eventos')
         }
     }
 
