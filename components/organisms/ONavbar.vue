@@ -28,13 +28,21 @@
                 v-if="1"
                 class="o-navbar__cta"
             >
-                <a-button
+                <!-- <a-button
                     outlined
                     fit-content
                     large
                     to="/seja-nosso-heroi"
                 >
                     Quero ser herói
+                </a-button> -->
+                <a-button
+                    outlined
+                    fit-content
+                    large
+                    to="/eventos/categoria/covid-19"
+                >
+                    Ações Covid-19
                 </a-button>
             </section>
 
