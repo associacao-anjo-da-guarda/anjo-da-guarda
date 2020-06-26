@@ -37,24 +37,30 @@
 
                     <m-card
                         :key="1"
-                        :image="sectionData.case1.featured_image"
-                        :title="$prismic.asText(sectionData.case1.title)"
-                        :text="$prismic.asText(sectionData.case1.description)"
-                        :link="`/cases/${sectionData.case1._meta.uid}`"
+                        :card-data="{
+                            image: sectionData.case1.featured_image,
+                            title: $prismic.asText(sectionData.case1.title),
+                            text: $prismic.asText(sectionData.case1.description),
+                            link: `/cases/${sectionData.case1._meta.uid}`
+                        }"
                     />
                     <m-card
                         :key="2"
-                        :image="sectionData.case2.featured_image"
-                        :title="$prismic.asText(sectionData.case2.title)"
-                        :text="$prismic.asText(sectionData.case2.description)"
-                        :link="`/cases/${sectionData.case2._meta.uid}`"
+                        :card-data="{
+                            image: sectionData.case2.featured_image,
+                            title: $prismic.asText(sectionData.case2.title),
+                            text: $prismic.asText(sectionData.case2.description),
+                            link: `/cases/${sectionData.case2._meta.uid}`
+                        }"
                     />
                     <m-card
                         :key="3"
-                        :image="sectionData.case3.featured_image"
-                        :title="$prismic.asText(sectionData.case3.title)"
-                        :text="$prismic.asText(sectionData.case3.description)"
-                        :link="`/cases/${sectionData.case3._meta.uid}`"
+                        :card-data="{
+                            image: sectionData.case3.featured_image,
+                            title: $prismic.asText(sectionData.case3.title),
+                            text: $prismic.asText(sectionData.case3.description),
+                            link: `/cases/${sectionData.case3._meta.uid}`
+                        }"
                     />
 
                 </o-wrapper>
