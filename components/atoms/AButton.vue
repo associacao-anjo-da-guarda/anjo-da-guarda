@@ -112,6 +112,7 @@ export default {
 }
 
 .a-button:hover {
+    color: var(--color-on-primary);
     background-color: var(--color-primary-dark);
 }
 
@@ -120,6 +121,7 @@ export default {
     color: var(--color-on-secondary);
 }
 .a-button--secondary:hover {
+    color: var(--color-on-secondary);
     background-color: var(--color-secondary-dark);
 }
 

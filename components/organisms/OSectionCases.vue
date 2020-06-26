@@ -67,7 +67,6 @@
                 >
 
                     <a-button
-                        secondary
                         large
                         to="/seja-nosso-heroi"
                     >
