@@ -1,0 +1,22 @@
+query allParceiros{
+  allParceiros{
+    edges{
+      node{
+        name
+        description
+        logo
+        web_site {
+          ... on _ExternalLink {
+            url
+          }
+        }
+        _meta{
+          uid
+          type
+          firstPublicationDate
+          lastPublicationDate
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,8 @@ export default {
 
     components: {
         MGeneralContentCard: () => import('@/components/molecules/MGeneralContentCard'),
-        MTransparencyCard: () => import('@/components/molecules/MTransparencyCard')
+        MTransparencyCard: () => import('@/components/molecules/MTransparencyCard'),
+        MLogoCard: () => import('@/components/molecules/MLogoCard')
     },
 
     props: {
@@ -25,13 +26,17 @@ export default {
 
         transparencyCard: {
             type: Boolean
+        },
+
+        logoCard: {
+            type: Boolean
         }
 
     },
 
     computed: {
         getComponent () {
-            return this.transparencyCard ? 'MTransparencyCard' : 'MGeneralContentCard'
+            return this.transparencyCard ? 'MTransparencyCard' : this.logoCard ? 'MLogoCard' : 'MGeneralContentCard'
         }
     }
 

@@ -87,7 +87,7 @@
                 <a-button
                     text
                     large
-                    to="/"
+                    to="/parceiros"
                     class="m-menu__item"
                 >
                     Parceiros
