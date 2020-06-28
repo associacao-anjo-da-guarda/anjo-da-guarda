@@ -26,6 +26,14 @@ query case($uid: String!, $lang: String!) {
                 embed
             }
         }
+        ...on CaseBodyImage_gallery {
+            type
+            label
+            fields {
+                gallery_image
+                image_description
+            }
+        }
     }
     _meta{
       uid

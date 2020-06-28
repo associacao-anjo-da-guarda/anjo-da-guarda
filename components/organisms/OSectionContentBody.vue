@@ -87,4 +87,7 @@ export default {
     max-width: calc((var(--padding-section) * 2) + 43.75rem);
     padding: 0 var(--padding-section);
 }
+.o-section-content-body__gallery-wrapper {
+    padding: var(--space) 0;
+}
 </style>

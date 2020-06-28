@@ -26,6 +26,14 @@ query evento($uid: String!, $lang: String!) {
                 embed
             }
         }
+        ...on EventoBodyImage_gallery {
+            type
+            label
+            fields {
+                gallery_image
+                image_description
+            }
+        }
     }
     _meta{
       uid

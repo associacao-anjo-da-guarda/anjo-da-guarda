@@ -1,4 +1,4 @@
-query allGalerias{
+query allGalerias {
     allGalerias {
         edges {
             node {
@@ -14,35 +14,35 @@ query allGalerias{
                 }
                 body {
                     __typename
-                    ... on GaleriaBodyText {
-                        type
-                        label
-                        primary {
-                            text
+                        ...on GaleriaBodyText {
+                            type
+                            label
+                            primary {
+                                text
+                            }
                         }
-                    }
-                    ... on GaleriaBodyImage {
-                        type
-                        label
-                        primary {
-                            image
+                        ...on GaleriaBodyImage {
+                            type
+                            label
+                            primary {
+                                image
+                            }
                         }
-                    }
-                    ... on GaleriaBodyEmbed {
-                        type
-                        label
-                        primary {
-                            embed
+                        ...on GaleriaBodyEmbed {
+                            type
+                            label
+                            primary {
+                                embed
+                            }
                         }
-                    }
-                  ... on GaleriaBodyImage_gallery {
-                    type
-                    label
-                    fields {
-                      gallery_image
-                      image_description
-                    }
-                  }
+                        ...on GaleriaBodyImage_gallery {
+                            type
+                            label
+                            fields {
+                                gallery_image
+                                image_description
+                            }
+                        }
                 }
             }
         }
