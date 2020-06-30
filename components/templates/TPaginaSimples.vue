@@ -2,7 +2,10 @@
 
     <main class="o-main">
 
-        <o-section-featured-image :featured-image="pagina.featured_image" />
+        <o-section-featured-image
+            boxed
+            :featured-image="pagina.featured_image"
+        />
 
         <o-section class="o-section-content">
             <o-wrapper

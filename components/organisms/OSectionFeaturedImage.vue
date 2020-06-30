@@ -2,11 +2,13 @@
 
     <o-section :class="{'o-section-featured-image--gradiente': gradiente}">
 
-        <o-wrapper v-if="featuredImage">
+        <o-wrapper
+            v-if="featuredImage"
+            :boxed="boxed"
+            :class="{'o-section-featured-image-wrapper--boxed': boxed}"
+        >
 
             <a-image
-                width="100%"
-                height="60vh"
                 is-bg
                 :src="featuredImage.url"
             />
@@ -36,6 +38,10 @@ export default {
 
         gradiente: {
             type: Boolean
+        },
+
+        boxed: {
+            type: Boolean
         }
     }
 
@@ -54,7 +60,34 @@ export default {
         url("~assets/image-crianca-superman-lg.jpg") no-repeat center, #d4113f;
     background-size: cover;
 }
+
 .o-section-featured-image-wrapper--no-image {
     padding-top: var(--padding-section);
+}
+
+.o-section-featured-image-wrapper--boxed {
+    padding-top: 64px;
+}
+@media screen and (min-width: 1200px) {
+    .o-section-featured-image-wrapper--boxed {
+        padding-top: 84px;
+    }
+}
+@media screen and (min-width: 1350px) {
+    .o-section-featured-image-wrapper--boxed {
+        padding-top: calc(84px + var(--padding-section));
+    }
+}
+
+.a-image.a-image--bg {
+    width: 100%;
+    height: 56.25vw;
+}
+@media screen and (min-width: 1350px) {
+    .a-image.a-image--bg {
+        width: 100%;
+        height: 760px;
+        border-radius: 20px;
+    }
 }
 </style>
