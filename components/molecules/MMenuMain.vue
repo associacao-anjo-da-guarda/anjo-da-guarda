@@ -98,7 +98,7 @@
                 <a-button
                     text
                     large
-                    to="/"
+                    href="https://wa.me/5517997730213"
                     class="m-menu__item"
                 >
                     Contato
