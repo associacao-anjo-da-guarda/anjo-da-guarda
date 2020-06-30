@@ -35,7 +35,7 @@
                     to="/eventos/categoria/covid-19"
                     class="m-menu__item"
                 >
-                    Ações Covid-19
+                    Anjos em Ação - Covid 19
                 </a-button>
             </li>
 
