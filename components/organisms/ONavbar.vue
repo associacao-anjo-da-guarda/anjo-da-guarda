@@ -42,7 +42,7 @@
                     large
                     to="/eventos/categoria/covid-19"
                 >
-                    Ações Covid-19
+                    Anjos em Ação - Covid 19
                 </a-button>
             </section>
 
