@@ -23,7 +23,7 @@ export default {
 
     async asyncData (context) {
         try {
-            const { data: { allTransparencias: { edges } } } = await apollo.query({
+            const { data: { allTransparencias: { edges, totalCount, pageInfo } } } = await apollo.query({
                 query,
                 fetchPolicy: 'no-cache'
             })
@@ -32,7 +32,9 @@ export default {
                 return {
                     pagina: {
                         title: 'Nossa realidade em números',
-                        items: edges /** Array */
+                        items: edges, /** Array */
+                        totalCount,
+                        pageInfo
                     }
                 }
             }

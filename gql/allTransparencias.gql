@@ -1,6 +1,14 @@
-query allTransparencias {
-    allTransparencias {
+query allTransparencias($after: String, $first: Int, $before: String, $last: Int) {
+    allTransparencias(after: $after, first: $first, before: $before, last: $last) {
+        totalCount
+        pageInfo {
+          hasPreviousPage
+          hasNextPage
+          startCursor
+          endCursor
+        }
         edges {
+            cursor
             node {
                 title
                 description

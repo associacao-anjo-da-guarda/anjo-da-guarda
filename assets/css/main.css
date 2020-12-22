@@ -13,7 +13,7 @@
 /**
 * Body definitions
 * - Does not change below
-* - Open typography.css file to change the values
+* - Open typography.css or color.css file to change the values
 */
 body {
     font-family: var(--font-family);

@@ -1,6 +1,14 @@
-query allEventos($categoryId: String){
-    allEventos(where: {category: $categoryId}) {
+query allEventos($categoryId: String, $after: String, $first: Int, $before: String, $last: Int){
+    allEventos(where: {category: $categoryId}, after: $after, first: $first, before: $before, last: $last) {
+        totalCount
+        pageInfo {
+          hasPreviousPage
+          hasNextPage
+          startCursor
+          endCursor
+        }
         edges {
+            cursor
             node {
                 title
                 description

@@ -1,6 +1,14 @@
-query allGalerias {
-    allGalerias {
+query allGalerias($after: String, $first: Int, $before: String, $last: Int) {
+    allGalerias(after: $after, first: $first, before: $before, last: $last) {
+        totalCount
+        pageInfo {
+          hasPreviousPage
+          hasNextPage
+          startCursor
+          endCursor
+        }
         edges {
+            cursor
             node {
                 title
                 description
