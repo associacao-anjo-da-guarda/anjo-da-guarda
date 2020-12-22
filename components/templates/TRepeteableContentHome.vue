@@ -63,6 +63,15 @@
                         row-gap-normal
                     >
 
+                        <a-button
+                            v-if="pagina.pageInfo.hasNextPage"
+                            secondary
+                            large
+                            @click="showMore"
+                        >
+                            Ver mais
+                        </a-button>
+
                         <!-- <a-button
                             outlined
                             large
@@ -109,6 +118,8 @@
 </template>
 
 <script>
+import { apollo } from '@/prismicConfig'
+import allEventosQuery from '@/gql/allEventos.gql'
 
 export default {
 
@@ -134,6 +145,28 @@ export default {
                 link: `${this.$route.path}/${item.node._meta.uid}`,
                 interval: this.$prismic.asText(item.node.interval)
             }
+        },
+
+        async showMore () {
+
+            const after = this.pagina.items[this.pagina.items.length - 1].cursor
+
+            const { data: { allEventos: { edges, pageInfo } } } = await apollo.query({
+                query: allEventosQuery,
+                variables: {
+                    after,
+                    first: 20
+                },
+                fetchPolicy: 'no-cache'
+            })
+
+            if (!edges[0]) {
+                return
+            }
+
+            this.pagina.items = [...this.pagina.items, ...edges]
+            this.pagina.pageInfo = pageInfo
+
         }
 
     }

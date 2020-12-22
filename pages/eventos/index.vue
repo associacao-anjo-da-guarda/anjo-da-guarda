@@ -23,7 +23,7 @@ export default {
 
     async asyncData (context) {
         try {
-            const { data: { allEventos: { edges } } } = await apollo.query({
+            const { data: { allEventos: { edges, totalCount, pageInfo } } } = await apollo.query({
                 query,
                 fetchPolicy: 'no-cache'
             })
@@ -32,7 +32,9 @@ export default {
                 return {
                     pagina: {
                         title: 'Eventos',
-                        items: edges /** Array */
+                        items: edges, /** Array */
+                        totalCount,
+                        pageInfo
                     }
                 }
             }

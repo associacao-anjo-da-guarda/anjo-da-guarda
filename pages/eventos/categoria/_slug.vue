@@ -75,6 +75,15 @@
                         row-gap-normal
                     >
 
+                        <a-button
+                            v-if="pageInfo.hasNextPage"
+                            secondary
+                            large
+                            @click="showMore"
+                        >
+                            Ver mais
+                        </a-button>
+
                         <!-- <a-button
                             outlined
                             large
@@ -136,7 +145,7 @@ export default {
         try {
             const uid = params.slug
 
-            const { data: { event_category: { _meta: { id } } } } = await apollo.query({
+            const { data: { event_category: { _meta: { id: categoryId } } } } = await apollo.query({
                 query: eventCategoryQuery,
                 variables: {
                     uid,
@@ -145,17 +154,20 @@ export default {
                 fetchPolicy: 'no-cache'
             })
 
-            const { data: { allEventos: { edges } } } = await apollo.query({
+            const { data: { allEventos: { edges, totalCount, pageInfo } } } = await apollo.query({
                 query: allEventosQuery,
                 variables: {
-                    categoryId: id
+                    categoryId
                 },
                 fetchPolicy: 'no-cache'
             })
 
             if (edges[0]) {
                 return {
-                    items: edges /** Array */
+                    items: edges, /** Array */
+                    totalCount,
+                    pageInfo,
+                    categoryId
                 }
             }
         } catch (e) {
@@ -174,6 +186,30 @@ export default {
                 link: `/eventos/${item.node._meta.uid}`,
                 interval: this.$prismic.asText(item.node.interval)
             }
+        },
+
+        async showMore () {
+
+            const { categoryId } = this
+            const after = this.items[this.items.length - 1].cursor
+
+            const { data: { allEventos: { edges, pageInfo } } } = await apollo.query({
+                query: allEventosQuery,
+                variables: {
+                    categoryId,
+                    after,
+                    first: 20
+                },
+                fetchPolicy: 'no-cache'
+            })
+
+            if (!edges[0]) {
+                return
+            }
+
+            this.items = [...this.items, ...edges]
+            this.pageInfo = pageInfo
+
         }
 
     }
