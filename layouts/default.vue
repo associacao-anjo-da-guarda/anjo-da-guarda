@@ -6,9 +6,7 @@
 
         <nuxt />
 
-        <!-- <footer>
-            oioioiasu doiu aosid
-        </footer> -->
+        <o-footer-main />
 
     </div>
 
@@ -16,16 +14,15 @@
 
 <script>
 import ONavbar from '@/components/organisms/ONavbar'
+import OFooterMain from '@/components/organisms/OFooterMain'
 
 export default {
 
     name: 'Default',
 
     components: {
-        ONavbar
+        ONavbar,
+        OFooterMain
     }
 }
 </script>
-
-<style>
-</style>
