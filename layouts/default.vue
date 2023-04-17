@@ -9,7 +9,9 @@
         <o-footer-main />
 
         <div class="o-cookie-banner">
-            <OCookieConsentBanner />
+            <client-only placeholder="Carregando...">
+                <OCookieConsentBanner />
+            </client-only>
         </div>
 
     </div>
