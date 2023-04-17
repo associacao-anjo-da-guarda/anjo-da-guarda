@@ -6,9 +6,11 @@
 
         <nuxt />
 
-        <footer class="o-main-footer">
+        <o-footer-main />
+
+        <div class="o-cookie-banner">
             <OCookieConsentBanner />
-        </footer>
+        </div>
 
     </div>
 
@@ -17,6 +19,7 @@
 <script>
 import ONavbar from '@/components/organisms/ONavbar'
 import OCookieConsentBanner from '@/components/organisms/OCookieConsentBanner.vue'
+import OFooterMain from '@/components/organisms/OFooterMain'
 
 export default {
 
@@ -24,13 +27,15 @@ export default {
 
     components: {
         ONavbar,
+        OFooterMain,
         OCookieConsentBanner
+
     }
 }
 </script>
 
 <style>
-.o-main-footer {
+.o-cookie-banner {
     position: fixed;
     bottom: 0;
     left: 0;
