@@ -26,7 +26,8 @@
     "apollo-link-prismic": "^1.0.7",
     "graphql": "^15.1.0",
     "graphql-tag": "^2.10.3",
-    "nuxt": "^2.11.0"
+    "nuxt": "^2.11.0",
+    "vue-cookieconsent-component": "^1.2.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
